@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>记一次折腾-搭建hexo博客并部署到github（二） | 彦</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="上次搭完博客后，当然不仅仅满足于此，个人最爱的还是换主题，另外还有几个不太明白的地方。
+
+为毛每次都要加sudo？ 
+为毛每次都要先到~/.ssh下面执行ssh-add id_rsa才不会报ssh key错误？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记一次折腾-搭建hexo博客并部署到github（二）">
+<meta property="og:url" content="http://huyanshan.com/2015/11/27/hexo-built2/index.html">
+<meta property="og:site_name" content="彦">
+<meta property="og:description" content="上次搭完博客后，当然不仅仅满足于此，个人最爱的还是换主题，另外还有几个不太明白的地方。
+
+为毛每次都要加sudo？ 
+为毛每次都要先到~/.ssh下面执行ssh-add id_rsa才不会报ssh key错误？">
+<meta property="og:image" content="http://static.zybuluo.com/Yanshan/3ftqgitwr483vkr0xwqnq9k6/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-27%20%E4%B8%8B%E5%8D%8811.24.56.png">
+<meta property="og:image" content="http://static.zybuluo.com/Yanshan/67gj3ffv43qamstp8rradz4t/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-27%20%E4%B8%8B%E5%8D%8811.24.24.png">
+<meta property="og:image" content="http://static.zybuluo.com/Yanshan/3vo7d0jpor9asup7k04z1vqu/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-27%20%E4%B8%8B%E5%8D%8811.31.03.png">
+<meta property="og:image" content="http://static.zybuluo.com/Yanshan/ozh3a958umv2izyvn7kyoc6e/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-27%20%E4%B8%8B%E5%8D%8811.31.13.png">
+<meta property="og:image" content="http://static.zybuluo.com/Yanshan/0du8u6xj1h6vrmpgfnauslz1/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-27%20%E4%B8%8B%E5%8D%8811.45.34.png">
+<meta property="og:updated_time" content="2016-08-17T07:28:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="记一次折腾-搭建hexo博客并部署到github（二）">
+<meta name="twitter:description" content="上次搭完博客后，当然不仅仅满足于此，个人最爱的还是换主题，另外还有几个不太明白的地方。
+
+为毛每次都要加sudo？ 
+为毛每次都要先到~/.ssh下面执行ssh-add id_rsa才不会报ssh key错误？">
+<meta name="twitter:image" content="http://static.zybuluo.com/Yanshan/3ftqgitwr483vkr0xwqnq9k6/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-27%20%E4%B8%8B%E5%8D%8811.24.56.png">
+  
+    <link rel="alternative" href="/atom.xml" title="彦" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favsicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/ryan.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Yanshan</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">折腾的人生</p>
+		
+		
+		<form><input type="text" class="search" placeholder=" Search..."></form>
+				
+
+
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/tags/">标签云</a></li>
+				        
+							<li><a href="/about/">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:yanshan_huhu@qq.com" title="Email"></a></li>
+					        
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/u/5400534341" title="新浪微博"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/huyanshan" title="GitHub"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/huyanshan" title="知乎"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">一个热爱技术的青年</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Yanshan</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/ryan.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">Yanshan</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">折腾的人生</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/tags/">标签云</a></li>
+		        
+					<li><a href="/about/">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:yanshan_huhu@qq.com" title="Email"></a></li>
+					        
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/u/5400534341" title="新浪微博"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/huyanshan" title="GitHub"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/huyanshan" title="知乎"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-hexo-built2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/27/hexo-built2/" class="article-date">
+  	<time datetime="2015-11-27T15:43:51.000Z" itemprop="datePublished">2015-11-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      记一次折腾-搭建hexo博客并部署到github（二）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/trying/">折腾</a>
+	</div>
+
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p>上次搭完博客后，当然不仅仅满足于此，个人最爱的还是换主题，另外还有几个不太明白的地方。</p>
+<ul>
+<li>为毛每次都要加sudo？ </li>
+<li>为毛每次都要先到~/.ssh下面执行ssh-add id_rsa才不会报ssh key错误？<a id="more"></a>
+后来通过Google，找到如下两个解答<br><a href="http://clavis.me/Hexo/Creat-Blog-With-Hexo-Under-Mac/" target="_blank" rel="external">1为毛每次都要加sudo？ </a>其中有这样一段话</li>
+</ul>
+<blockquote>
+<p>加上-g是全局安装，去掉-g是把模块安装到当前目录，全局安装是安装到root目录下的，在root目录下安装文件都需要root权限，所以要加上sudo</p>
+</blockquote>
+<p>由此想起安装hexo时的确是加了-g，这个问题解决</p>
+<p><a href="http://idealife.github.io/2015/10/02/Hexo部署时提示fatal-Could-not-read-from-remote-repository的问题处理/" target="_blank" rel="external">2为毛每次都要先到~/.ssh下面执行ssh-add id_rsa才不会报ssh key错误？</a><br>这里讲了权限的问题</p>
+<blockquote>
+<p>因为我生成公钥的命令是ssh-keygen -t rsa -C “idealife@github.com”<br>没有加sudo，生成的公钥是当前用户的，路径是 /Users/idealife/.ssh。而sudo hexo deploy命令执行的时候应该会去读取的root用户的公钥，很显然root下还没有对应的公钥信息生成。<br>随即立即验证这个推测。<br>1、为root生成publickey:sudo ssh-keygen -t rsa -C “idealife@github.com”，对应路径为/var/root/.ssh<br>2、提取公钥信息并配置到github中。问题又来了，在UI界面中是无法访问到/var下的root文件夹的。我们可以通过sudo cat /var/root/.ssh/id_rsa.pub可以绕开这个问题。<br>3、执行sudo hexo deploy，部署成功！</p>
+</blockquote>
+<p>虽然没有完全解决我的问题，但是也大概明白了原因，有空时候继续研究，自己对unix权限这一块还不是很熟。</p>
+<h2 id="设置主题"><a href="#设置主题" class="headerlink" title="设置主题"></a>设置主题</h2><p>这才是最喜欢折腾的地方。这种东西当然要先去知乎搜一搜，相关问题：<a href="http://www.zhihu.com/question/24422335" target="_blank" rel="external">『有哪些好看的hexo主题？』</a>在这里试用了一下排名第一的next，但是感觉不够透明，毕竟我是一个小清新。以『hexo透明主题』为关键字搜到了<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">yelle</a>，非常喜欢，于是，进入hexo目录（我的为/Blog）使用如下命令<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee</div></pre></td></tr></table></figure></p>
+<p>然后修改_config.yml文件中theme为yelle，之后部署到github上</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo hexo g</span></div><div class="line">sudo hexo d</div></pre></td></tr></table></figure>
+<p>这个主题还有很多配置的东西，按照说明搞就好了，非常感谢作者，自己学到了很多，他的博客地址是<a href="http://moxfive.xyz。" target="_blank" rel="external">http://moxfive.xyz。</a></p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>既然折腾了，那就索性折腾到底。谷歌了一下，好像万网上买域名还比较靠谱，而且已经并入阿里云了，靠着阿里爸爸底气更足了。搜了一下，发现自己名字全拼的域名还在！赶紧注册，本来自己想买一个.me域名的，后来问了下同事，同事说当然买.com，比较通用。另外.com居然要便宜好几块钱，遂买了.com。</p>
+<p>买的过程很简单，就填一些实名信息就好了。之后过几分钟，在产品与服务-&gt;云解析中设置一下，绑到github.io上。</p>
+<p><img src="http://static.zybuluo.com/Yanshan/3ftqgitwr483vkr0xwqnq9k6/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-27%20%E4%B8%8B%E5%8D%8811.24.56.png" alt="屏幕快照 2015-11-27 下午11.24.56.png-149.2kB"></p>
+<p><img src="http://static.zybuluo.com/Yanshan/67gj3ffv43qamstp8rradz4t/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-27%20%E4%B8%8B%E5%8D%8811.24.24.png" alt="屏幕快照 2015-11-27 下午11.24.24.png-30.9kB"></p>
+<p>到这里还没有完，这时输入你设定的域名是会被定向到你的Github pages页面，但是这个域名Github不知道，就会返回一个经典的404.。。。</p>
+<p>在hexo/source/目录下新建CNAME文件，文件不带任何后缀，然后用sublime打开，然后添加自己的域名在文件中<br><img src="http://static.zybuluo.com/Yanshan/3vo7d0jpor9asup7k04z1vqu/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-27%20%E4%B8%8B%E5%8D%8811.31.03.png" alt="屏幕快照 2015-11-27 下午11.31.03.png-99.9kB"></p>
+<p>然后在hexo/_config.yml文件，修改url为注册过的域名<br><img src="http://static.zybuluo.com/Yanshan/ozh3a958umv2izyvn7kyoc6e/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-27%20%E4%B8%8B%E5%8D%8811.31.13.png" alt="屏幕快照 2015-11-27 下午11.31.13.png-70.7kB"></p>
+<p>之后再执行</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo hexo g</span></div><div class="line">sudo hexo d</div></pre></td></tr></table></figure>
+<p>完工。</p>
+<h2 id="写新文章"><a href="#写新文章" class="headerlink" title="写新文章"></a>写新文章</h2><blockquote>
+<p>sudo hexo new “postName”</p>
+</blockquote>
+<p>这个命令会在source/_posts下新生成一个md文件（注意postName是全英文的），设置好标题（记好冒号后面一定有一个空格）<br><img src="http://static.zybuluo.com/Yanshan/0du8u6xj1h6vrmpgfnauslz1/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-27%20%E4%B8%8B%E5%8D%8811.45.34.png" alt="屏幕快照 2015-11-27 下午11.45.34.png-76.3kB"></p>
+<p>在里面写好内容然后再</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo hexo g</span></div><div class="line">sudo hexo d</div></pre></td></tr></table></figure>
+<p>就可以在自己的blog看到新文章了，我通常都是用cmd markdown写好粘过来。</p>
+<p>很兴奋，有点小小的成就感，终于有一个自己名字的域名和自己的blog了，预计会把自己在别的地方写过的几篇挪过来。这个过程参考了很多的blog，也都列在了文章里，非常感谢他们分享自己的知识。</p>
+<p>从『一个』拿来一句话作为结尾。</p>
+<blockquote>
+<p>有时候我们认为生活背叛了我们，但是很久以后我们才发现，其实是我们自己背叛了自己。 from 《西伯利亚的理发师》</p>
+</blockquote>
+
+      
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="copyright">
+  <p><span>本文标题:</span><a href="/2015/11/27/hexo-built2/">记一次折腾-搭建hexo博客并部署到github（二）</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Yanshan 的个人博客">Yanshan</a></p>
+  <p><span>发布时间:</span>2015年11月27日 - 23时43分</p>
+  <p><span>最后更新:</span>2016年08月17日 - 15时28分</p>
+  <p>
+    <span>原始链接:</span><a href="/2015/11/27/hexo-built2/" title="记一次折腾-搭建hexo博客并部署到github（二）">http://huyanshan.com/2015/11/27/hexo-built2/</a>
+    <span class="btn" data-clipboard-text="原文: http://huyanshan.com/2015/11/27/hexo-built2/　　作者: Yanshan" title="点击复制文章链接">
+        <i class="fa fa-clipboard"></i>
+    </span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
+  <script src="/js/clipboard.min.js"></script>
+  <script> var clipboard = new Clipboard('.btn'); </script>
+</div>
+<style type="text/css">
+  .copyright p .btn {
+    margin-left: 1em;
+  }
+  .copyright:hover p .btn::after {
+    content: "复制"
+  }
+  .copyright p .btn:hover {
+      color: gray;
+      cursor: pointer;
+    };
+</style>
+
+
+
+<nav id="article-nav">
+  
+    <div id="article-nav-newer" class="article-nav-title">
+      <a href="/2016/03/13/phabricator-built/">
+        centos6.5搭建phabricator全过程
+      </a>
+    </div>
+  
+  
+    <div id="article-nav-older" class="article-nav-title">
+      <a href="/2015/11/25/hexo-built/">
+        记一次折腾-搭建hexo博客并部署到github
+      </a>
+    </div>
+  
+</nav>
+
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+<strong class="toc-title">文章目录</strong>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置主题"><span class="toc-number">1.</span> <span class="toc-text">设置主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绑定域名"><span class="toc-number">2.</span> <span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写新文章"><span class="toc-number">3.</span> <span class="toc-text">写新文章</span></a></li></ol>
+</div>
+<style type="text/css">
+  .left-col .switch-btn {
+    display: none;
+  }
+  .left-col .switch-area {
+    display: none;
+  }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+  var toc_button= document.getElementById("tocButton");
+  var toc_div= document.getElementById("toc");
+  /* Show or hide toc when click on tocButton.
+  通过点击设置的按钮显示或者隐藏文章目录.*/
+  toc_button.onclick=function(){
+  if(toc_div.style.display=="none"){
+  toc_div.style.display="block";
+  toc_button.value="隐藏目录";
+  document.getElementById("switch-btn").style.display="none";
+  document.getElementById("switch-area").style.display="none";
+  }
+  else{
+  toc_div.style.display="none";
+  toc_button.value="显示目录";
+  document.getElementById("switch-btn").style.display="block";
+  document.getElementById("switch-area").style.display="block";
+  }
+  }
+</script>
+
+
+<div class="share">
+	<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+	<a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+	</div>
+	<script>
+	window._bd_share_config={
+		"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2015/11/27/hexo-built2/" data-title="记一次折腾-搭建hexo博客并部署到github（二）" data-url="http://huyanshan.com/2015/11/27/hexo-built2/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"huyanshan"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#ds-thread" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+  
+  
+    
+    <div  class="post-nav-button">
+    <a href="/2016/03/13/phabricator-built/" title="上一篇: centos6.5搭建phabricator全过程">
+    <i class="fa fa-angle-left"></i>
+    </a>
+    <a href="/2015/11/25/hexo-built/" title="下一篇: 记一次折腾-搭建hexo博客并部署到github">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+        
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 Yanshan
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+  <style>
+    body {
+      background: lightgray;
+    }
+    #container .left-col {
+      background: white;
+    }
+    .article-inner {
+      background: white;
+    }
+    .post-nav-button {
+      background: #ececec;
+    }
+    #header .header-nav .social #GitHub {
+      background-color: #bfd3ec;
+    }
+  </style>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

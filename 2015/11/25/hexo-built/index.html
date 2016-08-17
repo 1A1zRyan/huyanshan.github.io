@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>记一次折腾-搭建hexo博客并部署到github | 彦</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最近在学习Python，想把自己的学习经历和自己认为的一些重点内容记录下来形成blog，于是在博客园上写了一篇。但是自己实在是不喜欢那个显示效果，看到很多人在自己用hexo搭建blog，作为一个折腾党，不自己折腾一下怎么可以，于是开工。一路波折，遇到了很多问题，记录下来，也放在自己blog的第一篇吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记一次折腾-搭建hexo博客并部署到github">
+<meta property="og:url" content="http://huyanshan.com/2015/11/25/hexo-built/index.html">
+<meta property="og:site_name" content="彦">
+<meta property="og:description" content="最近在学习Python，想把自己的学习经历和自己认为的一些重点内容记录下来形成blog，于是在博客园上写了一篇。但是自己实在是不喜欢那个显示效果，看到很多人在自己用hexo搭建blog，作为一个折腾党，不自己折腾一下怎么可以，于是开工。一路波折，遇到了很多问题，记录下来，也放在自己blog的第一篇吧。">
+<meta property="og:image" content="http://static.zybuluo.com/Yanshan/m4l8on77p5mlnszhyxd7w10o/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-18%20%E4%B8%8A%E5%8D%8811.55.40.png">
+<meta property="og:image" content="http://static.zybuluo.com/Yanshan/ih4951qhp9jvyc4ap92mhyg8/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-18%20%E4%B8%8B%E5%8D%881.48.09.png">
+<meta property="og:image" content="http://static.zybuluo.com/Yanshan/4jf2djphzkyjl7cyr0a0n4s7/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-18%20%E4%B8%8B%E5%8D%882.29.38.png">
+<meta property="og:updated_time" content="2016-08-17T07:28:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="记一次折腾-搭建hexo博客并部署到github">
+<meta name="twitter:description" content="最近在学习Python，想把自己的学习经历和自己认为的一些重点内容记录下来形成blog，于是在博客园上写了一篇。但是自己实在是不喜欢那个显示效果，看到很多人在自己用hexo搭建blog，作为一个折腾党，不自己折腾一下怎么可以，于是开工。一路波折，遇到了很多问题，记录下来，也放在自己blog的第一篇吧。">
+<meta name="twitter:image" content="http://static.zybuluo.com/Yanshan/m4l8on77p5mlnszhyxd7w10o/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-18%20%E4%B8%8A%E5%8D%8811.55.40.png">
+  
+    <link rel="alternative" href="/atom.xml" title="彦" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favsicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/ryan.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Yanshan</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">折腾的人生</p>
+		
+		
+		<form><input type="text" class="search" placeholder=" Search..."></form>
+				
+
+
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/tags/">标签云</a></li>
+				        
+							<li><a href="/about/">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:yanshan_huhu@qq.com" title="Email"></a></li>
+					        
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/u/5400534341" title="新浪微博"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/huyanshan" title="GitHub"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/huyanshan" title="知乎"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">一个热爱技术的青年</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Yanshan</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/ryan.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">Yanshan</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">折腾的人生</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/tags/">标签云</a></li>
+		        
+					<li><a href="/about/">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:yanshan_huhu@qq.com" title="Email"></a></li>
+					        
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/u/5400534341" title="新浪微博"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/huyanshan" title="GitHub"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/huyanshan" title="知乎"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-hexo-built" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/25/hexo-built/" class="article-date">
+  	<time datetime="2015-11-25T07:24:43.000Z" itemprop="datePublished">2015-11-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      记一次折腾-搭建hexo博客并部署到github
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/trying/">折腾</a>
+	</div>
+
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p>最近在学习Python，想把自己的学习经历和自己认为的一些重点内容记录下来形成blog，于是在博客园上写了一篇。但是自己实在是不喜欢那个显示效果，看到很多人在自己用hexo搭建blog，作为一个折腾党，不自己折腾一下怎么可以，于是开工。一路波折，遇到了很多问题，记录下来，也放在自己blog的第一篇吧。<a id="more"></a></p>
+<h1 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h1><p>访问<a href="https://nodejs.org/en/" target="_blank" rel="external">nodejs</a>下载nodejs的安装包<br><img src="http://static.zybuluo.com/Yanshan/m4l8on77p5mlnszhyxd7w10o/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-18%20%E4%B8%8A%E5%8D%8811.55.40.png" alt="屏幕快照 2015-11-18 上午11.55.40.png-269.9kB"><br>我用的是5.1.0Stable版本。<br>下载好pkg文件后，一路下一步，装好nodejs。新版本已经同时安装npm，可以用以下命令检测是否安装成功。</p>
+<pre><code>node -v
+npm -v
+</code></pre><p>如果有版本号显示则表示安装成功，我的版本是<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">RyandeMacBook-Pro:Blog Ryan$ <span class="keyword">node</span> <span class="title">-v</span></div><div class="line">v5.<span class="number">1.0</span></div><div class="line">RyandeMacBook-Pro:Blog Ryan$ npm -v</div><div class="line"><span class="number">3.3</span>.<span class="number">12</span></div></pre></td></tr></table></figure></p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>这一步很坑，我使用</p>
+<pre><code>npm install -g hexo
+</code></pre><p>安装，会报错<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> ERR! Darwin <span class="number">15.0</span>.<span class="number">0</span></div><div class="line"><span class="built_in">npm</span> ERR! argv <span class="string">"/usr/local/bin/node"</span> <span class="string">"/usr/local/bin/npm"</span> <span class="string">"install"</span> <span class="string">"-g"</span> <span class="string">"hexo"</span></div><div class="line"><span class="built_in">npm</span> ERR! node v5.<span class="number">1.0</span></div><div class="line"><span class="built_in">npm</span> ERR! <span class="built_in">npm</span>  v3.<span class="number">3.12</span></div><div class="line"><span class="built_in">npm</span> ERR! path /usr/local/lib/node_modules</div><div class="line"><span class="built_in">npm</span> ERR! code EACCES</div><div class="line"><span class="built_in">npm</span> ERR! errno -<span class="number">13</span></div><div class="line"><span class="built_in">npm</span> ERR! syscall access</div><div class="line"></div><div class="line"><span class="built_in">npm</span> ERR! Error: EACCES: permission denied, access <span class="string">'/usr/local/lib/node_modules'</span></div><div class="line"><span class="built_in">npm</span> ERR!     at Error (<span class="keyword">native</span>)</div><div class="line"><span class="built_in">npm</span> ERR!  &#123; [Error: EACCES: permission denied, access <span class="string">'/usr/local/lib/node_modules'</span>]</div><div class="line"><span class="built_in">npm</span> ERR!   errno: -<span class="number">13</span>,</div><div class="line"><span class="built_in">npm</span> ERR!   code: <span class="string">'EACCES'</span>,</div><div class="line"><span class="built_in">npm</span> ERR!   syscall: <span class="string">'access'</span>,</div><div class="line"><span class="built_in">npm</span> ERR!   path: <span class="string">'/usr/local/lib/node_modules'</span> &#125;</div><div class="line"><span class="built_in">npm</span> ERR! </div><div class="line"><span class="built_in">npm</span> ERR! Please <span class="keyword">try</span> running <span class="keyword">this</span> command again as root/Administrator.</div><div class="line"></div><div class="line"><span class="built_in">npm</span> ERR! Please include the following file <span class="keyword">with</span> any support request:</div><div class="line"><span class="built_in">npm</span> ERR!     /Users/Ryan/<span class="built_in">npm</span>-debug.log</div></pre></td></tr></table></figure></p>
+<p>看上去是权限不够，于是乎，加上sudo</p>
+<pre><code>sudo npm install -g hexo
+</code></pre><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">RyandeMacBook-<span class="symbol">Pro:</span>~ Ryan$ sudo npm install -g hexo</div><div class="line"><span class="symbol">Password:</span></div><div class="line">/usr/local/bin/hexo -&gt; <span class="regexp">/usr/local</span><span class="regexp">/lib/node</span>_modules/hexo/bin/hexo</div><div class="line"></div><div class="line">&gt; fsevents@<span class="number">1.0</span>.<span class="number">5</span> install /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">node_modules</span>/<span class="title">hexo</span>/<span class="title">node_modules</span>/<span class="title">fsevents</span></span></div><div class="line">&gt; node-pre-gyp install --fallback-to-build</div><div class="line"></div><div class="line">[fsevents] <span class="symbol">Success:</span> <span class="string">"/usr/local/lib/node_modules/hexo/node_modules/fsevents/lib/binding/Release/node-v47-darwin-x64/fse.node"</span> is installed via remote</div><div class="line"></div><div class="line">&gt; dtrace-provider@<span class="number">0.6</span>.<span class="number">0</span> install /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">node_modules</span>/<span class="title">hexo</span>/<span class="title">node_modules</span>/<span class="title">dtrace</span>-<span class="title">provider</span></span></div><div class="line">&gt; node scripts/install.js</div></pre></td></tr></table></figure>
+<p>卡在了最后那一步<code>node scripts/install.js</code>，为毛一直卡着不动啊，于是问谷歌，得到的答案是hexo 3.x是需要使用命令</p>
+<pre><code>sudo npm install hexo-cli -g
+</code></pre><p>终于安装成功</p>
+<h2 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h2><p>新建一个文件夹，来存放hexo，我起名叫做『Blog』，你可以起一个任意你喜欢的名字。之后转到该文件夹下<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">RyandeMacBook-Pro:Blog Ryan$ hexo init</div><div class="line">INFO  Copying data <span class="keyword">to</span> ~/Blog</div><div class="line">INFO  You are almost done! Don't forget <span class="keyword">to</span> <span class="built_in">run</span> 'npm install' <span class="keyword">before</span> you start blogging <span class="keyword">with</span> Hexo!</div></pre></td></tr></table></figure></p>
+<p>既然它提醒要执行<code>npm install</code>，那么就执行一下，然后。。。有警告<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm WARN <span class="keyword">prefer </span>global marked@<span class="number">0</span>.<span class="number">3</span>.<span class="number">5</span> <span class="keyword">should </span><span class="keyword">be </span><span class="keyword">installed </span>with -g</div></pre></td></tr></table></figure></p>
+<p>执行</p>
+<pre><code>npm install -g
+</code></pre><p>shit!<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">npm</span> ERR! Darwin <span class="number">15.0</span>.<span class="number">0</span></div><div class="line"><span class="built_in">npm</span> ERR! argv <span class="string">"/usr/local/bin/node"</span> <span class="string">"/usr/local/bin/npm"</span> <span class="string">"install"</span> <span class="string">"-g"</span></div><div class="line"><span class="built_in">npm</span> ERR! node v5.<span class="number">1.0</span></div><div class="line"><span class="built_in">npm</span> ERR! <span class="built_in">npm</span>  v3.<span class="number">3.12</span></div><div class="line"><span class="built_in">npm</span> ERR! path /usr/local/lib/node_modules</div><div class="line"><span class="built_in">npm</span> ERR! code EACCES</div><div class="line"><span class="built_in">npm</span> ERR! errno -<span class="number">13</span></div><div class="line"><span class="built_in">npm</span> ERR! syscall access</div><div class="line"></div><div class="line"><span class="built_in">npm</span> ERR! Error: EACCES: permission denied, access <span class="string">'/usr/local/lib/node_modules'</span></div><div class="line"><span class="built_in">npm</span> ERR!     at Error (<span class="keyword">native</span>)</div><div class="line"><span class="built_in">npm</span> ERR!  &#123; [Error: EACCES: permission denied, access <span class="string">'/usr/local/lib/node_modules'</span>]</div><div class="line"><span class="built_in">npm</span> ERR!   errno: -<span class="number">13</span>,</div><div class="line"><span class="built_in">npm</span> ERR!   code: <span class="string">'EACCES'</span>,</div><div class="line"><span class="built_in">npm</span> ERR!   syscall: <span class="string">'access'</span>,</div><div class="line"><span class="built_in">npm</span> ERR!   path: <span class="string">'/usr/local/lib/node_modules'</span> &#125;</div><div class="line"><span class="built_in">npm</span> ERR! </div><div class="line"><span class="built_in">npm</span> ERR! Please <span class="keyword">try</span> running <span class="keyword">this</span> command again as root/Administrator.</div><div class="line"></div><div class="line"><span class="built_in">npm</span> ERR! Please include the following file <span class="keyword">with</span> any support request:</div><div class="line"><span class="built_in">npm</span> ERR!     /Users/Ryan/Blog/<span class="built_in">npm</span>-debug.log</div></pre></td></tr></table></figure></p>
+<p>所以又要执行</p>
+<pre><code>sudo npm install -g
+</code></pre><p>终于搞定。。。然后我们可以看到Blog文件夹下已经有hexo的文件了<br><img src="http://static.zybuluo.com/Yanshan/ih4951qhp9jvyc4ap92mhyg8/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-18%20%E4%B8%8B%E5%8D%881.48.09.png" alt="屏幕快照 2015-11-18 下午1.48.09.png-54.7kB"><br>查看一下hexo的版本</p>
+<pre><code>hexo -v
+</code></pre><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">RyandeMacBook-<span class="string">Pro:</span>Blog Ryan$ hexo -v</div><div class="line"><span class="string">hexo:</span> <span class="number">3.1</span><span class="number">.1</span></div><div class="line"><span class="string">os:</span> Darwin <span class="number">15.0</span><span class="number">.0</span> darwin x64</div><div class="line"><span class="string">http_parser:</span> <span class="number">2.6</span><span class="number">.0</span></div><div class="line"><span class="string">node:</span> <span class="number">5.1</span><span class="number">.0</span></div><div class="line"><span class="string">v8:</span> <span class="number">4.6</span><span class="number">.85</span><span class="number">.31</span></div><div class="line"><span class="string">uv:</span> <span class="number">1.7</span><span class="number">.5</span></div><div class="line"><span class="string">zlib:</span> <span class="number">1.2</span><span class="number">.8</span></div><div class="line"><span class="string">ares:</span> <span class="number">1.10</span><span class="number">.1</span>-DEV</div><div class="line"><span class="string">icu:</span> <span class="number">56.1</span></div><div class="line"><span class="string">modules:</span> <span class="number">47</span></div><div class="line"><span class="string">openssl:</span> <span class="number">1.0</span><span class="number">.2</span>d</div></pre></td></tr></table></figure>
+<p>这里介绍一下hexo的目录吧，参考的<a href="http://syxiaqj.github.io/2014/02/18/structure-of-hexo/" target="_blank" rel="external">浪花一朵朵</a><br><code>_config.yml</code><br>全局配置文件，网站的很多信息都在这里配置，诸如网站名称，副标题，描述，作者，语言，主题，部署等等参数。我的config文件如下：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Hexo Configuration</span></div><div class="line"><span class="comment">## Docs: http://hexo.io/docs/configuration.html</span></div><div class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></div><div class="line"></div><div class="line"><span class="comment"># Site</span></div><div class="line"><span class="attr">title:</span> 杉杉林 <span class="comment">#网站标题</span></div><div class="line"><span class="attr">subtitle:</span> 喜、怒、哀、乐 <span class="comment">#网站副标题</span></div><div class="line"><span class="attr">description:</span> 杉杉林 <span class="comment">#网站描述，网站上不会显示出来，但搜索引擎会用到的字段</span></div><div class="line"><span class="attr">author:</span> Yanshan <span class="comment">#作者</span></div><div class="line"><span class="attr">language:</span> zh-CN <span class="comment">#语言</span></div><div class="line"><span class="attr">email:</span> yanshan_huhu@qq.com <span class="comment">#邮箱</span></div><div class="line"><span class="attr">timezone:</span>      <span class="comment">#时区，默认使用系统的时区</span></div><div class="line"></div><div class="line"><span class="comment"># URL #部署到公网的信息配置</span></div><div class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></div><div class="line"><span class="attr">url:</span> http://huyanshan.github.io <span class="comment">#网址</span></div><div class="line"><span class="attr">root:</span> /                         <span class="comment">#网站根目录</span></div><div class="line"><span class="attr">permalink:</span> :year/:month/:day/:title/  <span class="comment">#文章永久链接格式</span></div><div class="line"><span class="attr">permalink_defaults:</span> <span class="comment">#永久链接中各部分的默认值</span></div><div class="line"></div><div class="line"><span class="comment"># Directory  #目录</span></div><div class="line"><span class="attr">source_dir:</span> source <span class="comment">#资源文件夹，用来存放内容</span></div><div class="line"><span class="attr">public_dir:</span> public  <span class="comment">#公共文件夹，这个文件夹用来存放生成的站点文件</span></div><div class="line"><span class="attr">tag_dir:</span> tags   <span class="comment">#标签文件夹tags</span></div><div class="line"><span class="attr">archive_dir:</span> archives   <span class="comment">#归档文件夹</span></div><div class="line"><span class="attr">category_dir:</span> categories <span class="comment">#分类文件夹</span></div><div class="line"><span class="attr">code_dir:</span> downloads/code  <span class="comment">#code文件夹</span></div><div class="line"><span class="attr">i18n_dir:</span> :lang <span class="comment">#国际化文件夹</span></div><div class="line"><span class="attr">skip_render:</span> <span class="comment">#跳过指定文件的渲染，您可使用glob来配置路径</span></div><div class="line"></div><div class="line"><span class="comment"># Writing</span></div><div class="line"><span class="attr">new_post_name:</span> :title.md <span class="comment"># File name of new posts #新文章的文件名称</span></div><div class="line"><span class="attr">default_layout:</span> post <span class="comment">#预设布局</span></div><div class="line"><span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment"># Transform title into titlecase 把标题转化为</span></div><div class="line"><span class="attr">external_link:</span> <span class="literal">true</span> <span class="comment"># Open external links in new tab 在新标签中打开链接</span></div><div class="line"><span class="attr">filename_case:</span> <span class="number">0</span> <span class="comment">#把文件名转换为（1）小写或者（2）大写</span></div><div class="line"><span class="attr">render_drafts:</span> <span class="literal">false</span> <span class="comment">#显示草稿</span></div><div class="line"><span class="attr">post_asset_folder:</span> <span class="literal">false</span> <span class="comment">#启动asset文件夹</span></div><div class="line"><span class="attr">relative_link:</span> <span class="literal">false</span> <span class="comment">#把链接改为与根目录的相对位置</span></div><div class="line"><span class="attr">future:</span> <span class="literal">true</span> <span class="comment">#显示未来的文章</span></div><div class="line"><span class="attr">highlight:</span> <span class="comment">#代码块设置</span></div><div class="line"><span class="attr">  enable:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  line_number:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  auto_detect:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  tab_replace:</span></div><div class="line"></div><div class="line"><span class="comment"># Category &amp; Tag</span></div><div class="line"><span class="attr">default_category:</span> uncategorized <span class="comment">#默认分类</span></div><div class="line"><span class="attr">category_map:</span> <span class="comment">#分类别名</span></div><div class="line"><span class="attr">tag_map:</span> <span class="comment">#标签别名</span></div><div class="line"></div><div class="line"><span class="comment"># Date / Time format</span></div><div class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></div><div class="line"><span class="comment">## You can customize the date format as defined in</span></div><div class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></div><div class="line"><span class="attr">date_format:</span> YYYY-MM-DD <span class="comment">#日期格式</span></div><div class="line"><span class="attr">time_format:</span> HH:mm:ss <span class="comment">#时间格式</span></div><div class="line"></div><div class="line"><span class="comment"># Pagination</span></div><div class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></div><div class="line"><span class="attr">per_page:</span> <span class="number">10</span> <span class="comment">#每页显示的文章量（0 = 关闭分页功能）</span></div><div class="line"><span class="attr">pagination_dir:</span> page <span class="comment">#分页目录</span></div><div class="line"></div><div class="line"><span class="comment"># Extensions</span></div><div class="line"><span class="comment">## Plugins: http://hexo.io/plugins/</span></div><div class="line"><span class="comment">## Themes: http://hexo.io/themes/</span></div><div class="line"><span class="attr">theme:</span> landscape <span class="comment">#当前主题名称</span></div><div class="line"></div><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></div><div class="line"><span class="attr">deploy:</span> <span class="comment">#部署</span></div><div class="line"><span class="attr">  type:</span> git</div><div class="line"><span class="attr">  repo:</span> git@github.com:huyanshan/huyanshan.github.io.git</div><div class="line"><span class="attr">  branch:</span> master</div></pre></td></tr></table></figure></p>
+<p><code>package.json</code><br>hexo框架的参数，如果不小心把它删掉了，没关系，新建一个文件，讲内容写入文件，保存就OK了。里面的参数基本上是固定的，我的文件夹下该文件内容如下：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-site"</span>,</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.0"</span>,</div><div class="line">  <span class="attr">"private"</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">"hexo"</span>: &#123;</div><div class="line">    <span class="attr">"version"</span>: <span class="string">"3.1.1"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"dependencies"</span>: &#123;</div><div class="line">    <span class="attr">"hexo"</span>: <span class="string">"^3.1.0"</span>,</div><div class="line">    <span class="attr">"hexo-deployer-git"</span>: <span class="string">"0.0.4"</span>,</div><div class="line">    <span class="attr">"hexo-generator-archive"</span>: <span class="string">"^0.1.2"</span>,</div><div class="line">    <span class="attr">"hexo-generator-category"</span>: <span class="string">"^0.1.2"</span>,</div><div class="line">    <span class="attr">"hexo-generator-index"</span>: <span class="string">"^0.1.2"</span>,</div><div class="line">    <span class="attr">"hexo-generator-tag"</span>: <span class="string">"^0.1.1"</span>,</div><div class="line">    <span class="attr">"hexo-renderer-ejs"</span>: <span class="string">"^0.1.0"</span>,</div><div class="line">    <span class="attr">"hexo-renderer-marked"</span>: <span class="string">"^0.2.4"</span>,</div><div class="line">    <span class="attr">"hexo-renderer-stylus"</span>: <span class="string">"^0.3.0"</span>,</div><div class="line">    <span class="attr">"hexo-server"</span>: <span class="string">"^0.1.2"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>scaffolds</code><br>scaffolds是“脚手架、骨架”的意思，当你新建一篇文章（hexo new ‘title’）的时候，hexo是根据这个目录下的文件进行构建的。基本不用关心。<br><code>scripts</code><br>脚本目录，此目录下的JavaScript文件会被自动执行。<br><code>source</code><br>这个目录很重要，新建的文章都是在保存在这个目录下的，有两个子目录：<code>_drafts</code>，<code>_posts</code>。需要新建的博文都放在<code>_posts</code>目录下。<br><code>_posts</code>目录下是一个个markdown文件。你应该可以看到一个hello-world.md的文件，文章就在这个文件中编辑。<br><code>_posts</code>目录下的md文件，会被编译成html文件，放到public（此文件现在应该没有，因为你还没有编译过）文件夹下。<br><code>themes</code><br>网站主题目录，hexo有非常好的主题拓展，支持的主题也很丰富。该目录下，每一个子目录就是一个主题，当然可以去网上下载别人做好的主题去扩展。主题目录下我们可以进行很多自定义的操作，诸如，给网站添加微博秀、添加评论组件、添加分享组件、添加统计等等，让自己的博客网站更丰富、有趣、实用。</p>
+<p>先介绍到这，然后启用hexo服务看一下吧<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">server</span></div></pre></td></tr></table></figure></p>
+<p>浏览器访问<code>localhost:4000</code>，就可以看到网站了。<br><img src="http://static.zybuluo.com/Yanshan/4jf2djphzkyjl7cyr0a0n4s7/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-11-18%20%E4%B8%8B%E5%8D%882.29.38.png" alt="屏幕快照 2015-11-18 下午2.29.38.png-1489.5kB"></p>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><p>这一步最折腾人了。。。。教训告诉我们，一定要先去看<a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="external">官方文档</a>。</p>
+<p>###新建仓库<br>首先，要有一个github帐号，建一个名字为『huyanshan.github.io』的repo。</p>
+<p>###配置SSH KEY<br>在这一步，费了很长时间(╬￣皿￣)凸。</p>
+<p>先检查下原有的ssh key：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">RyandeMacBook-Pro:~ Ryan$ cd ~/<span class="selector-class">.ssh</span></div><div class="line">RyandeMacBook-Pro:<span class="selector-class">.ssh</span> Ryan$ ls</div><div class="line">id_rsa		id_rsa<span class="selector-class">.pub</span>	key_backup	known_hosts</div></pre></td></tr></table></figure></p>
+<p>原本我是有一对key的，但是不知道为什么添加到github上一直不通，只好备份了一下重新生成。</p>
+<p>####生成SSH KEY<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">RyandeMacBook-Pro:.ssh Ryan$ ssh-keygen -t rsa -C <span class="string">"github帐号邮箱"</span></div><div class="line">Generating public/private rsa key pair.</div><div class="line">Enter file in which to save the key (/Users/Ryan/.ssh/id_rsa): </div><div class="line">/Users/Ryan/.ssh/id_rsa already exists.</div><div class="line">Overwrite (y/n)? y</div><div class="line">Enter passphrase (empty for no passphrase): </div><div class="line">Enter same passphrase again: </div><div class="line">Your identification has been saved in /Users/Ryan/.ssh/id_rsa.</div><div class="line">Your public key has been saved in /Users/Ryan/.ssh/id_rsa.pub.</div><div class="line">The key fingerprint is:</div><div class="line">SHA256:<span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span><span class="symbol">*</span> yanshan_huhu<span class="meta">@qq.com</span></div><div class="line">The key's randomart image is:</div><div class="line">+---[RSA 2048]----+</div><div class="line">|<span class="string">               o </span>|</div><div class="line">|<span class="string">              ..=</span>|</div><div class="line">|<span class="string">       .   . .  =</span>|</div><div class="line">|<span class="string">        oo. .   E</span>|</div><div class="line">|<span class="string">        Soo    o+</span>|</div><div class="line">|<span class="string">       . ..+..*.*</span>|</div><div class="line">|<span class="string">        o B.oB**+</span>|</div><div class="line">|<span class="string">         =oOoo+= </span>|</div><div class="line">|<span class="string">         +O+++o  </span>|</div><div class="line">+----[SHA256]-----+</div></pre></td></tr></table></figure></p>
+<p>别急，这里再做一步，把key添到ssh-agent里<a href="http://blog.flappyend.com/Generating-SSH-keys/" target="_blank" rel="external">github帮助-ssh密钥</a>，不然后面部署的时候会报key错误。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">RyandeMacBook-<span class="string">Pro:</span>.ssh Ryan$ ssh-add id_rsa</div><div class="line">Enter passphrase <span class="keyword">for</span> <span class="string">id_rsa:</span> </div><div class="line">Bad passphrase, <span class="keyword">try</span> again <span class="keyword">for</span> <span class="string">id_rsa:</span> </div><div class="line">Identity <span class="string">added:</span> id_rsa (id_rsa)</div></pre></td></tr></table></figure></p>
+<p>然后再去github的Account Setting里把id_rsa.pub添加进去，之后测试一下能不能通</p>
+<pre><code>RyandeMacBook-Pro:.ssh Ryan$ ssh -T git@github.com
+Hi huyanshan! You&apos;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre><p>表示key验证成功。</p>
+<p>##部署hexo到github<br>hexo3.x需要先安装hexo-deployer-git</p>
+<pre><code>$npm install hexo-deployer-git --save
+</code></pre><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">RyandeMacBook-Pro:Blog Ryan$ sudo hexo d -g</div><div class="line">Password:</div><div class="line">INFO  Files loaded <span class="keyword">in</span> <span class="number">410</span> ms</div><div class="line">INFO  Generated: js/script<span class="selector-class">.js</span></div><div class="line">INFO  Generated: fancybox/jquery<span class="selector-class">.fancybox</span><span class="selector-class">.pack</span><span class="selector-class">.js</span></div><div class="line">INFO  Generated: fancybox/jquery<span class="selector-class">.fancybox</span><span class="selector-class">.js</span></div><div class="line">INFO  Generated: fancybox/jquery<span class="selector-class">.fancybox</span><span class="selector-class">.css</span></div><div class="line">INFO  Generated: fancybox/helpers/jquery<span class="selector-class">.fancybox-thumbs</span><span class="selector-class">.js</span></div><div class="line">INFO  Generated: fancybox/helpers/jquery<span class="selector-class">.fancybox-thumbs</span><span class="selector-class">.css</span></div><div class="line">INFO  Generated: fancybox/helpers/jquery<span class="selector-class">.fancybox-media</span><span class="selector-class">.js</span></div><div class="line">INFO  Generated: fancybox/helpers/jquery<span class="selector-class">.fancybox-buttons</span><span class="selector-class">.js</span></div><div class="line">INFO  Generated: fancybox/helpers/jquery<span class="selector-class">.fancybox-buttons</span><span class="selector-class">.css</span></div><div class="line">INFO  Generated: fancybox/helpers/fancybox_buttons<span class="selector-class">.png</span></div><div class="line">INFO  Generated: fancybox/fancybox_sprite@<span class="number">2</span>x<span class="selector-class">.png</span></div><div class="line">INFO  Generated: fancybox/fancybox_sprite<span class="selector-class">.png</span></div><div class="line">INFO  Generated: fancybox/fancybox_overlay<span class="selector-class">.png</span></div><div class="line">INFO  Generated: fancybox/fancybox_loading@<span class="number">2</span>x<span class="selector-class">.gif</span></div><div class="line">INFO  Generated: fancybox/fancybox_loading<span class="selector-class">.gif</span></div><div class="line">INFO  Generated: fancybox/blank<span class="selector-class">.gif</span></div><div class="line">INFO  Generated: css/style<span class="selector-class">.css</span></div><div class="line">INFO  Generated: css/images/banner<span class="selector-class">.jpg</span></div><div class="line">INFO  Generated: css/fonts/fontawesome-webfont<span class="selector-class">.woff</span></div><div class="line">INFO  Generated: css/fonts/fontawesome-webfont<span class="selector-class">.ttf</span></div><div class="line">INFO  Generated: css/fonts/fontawesome-webfont<span class="selector-class">.svg</span></div><div class="line">INFO  Generated: css/fonts/fontawesome-webfont<span class="selector-class">.eot</span></div><div class="line">INFO  Generated: css/fonts/FontAwesome<span class="selector-class">.otf</span></div><div class="line">INFO  Generated: <span class="number">2015</span>/<span class="number">11</span>/<span class="number">18</span>/hello-world/index<span class="selector-class">.html</span></div><div class="line">INFO  Generated: archives/index<span class="selector-class">.html</span></div><div class="line">INFO  Generated: archives/<span class="number">2015</span>/index<span class="selector-class">.html</span></div><div class="line">INFO  Generated: archives/<span class="number">2015</span>/<span class="number">11</span>/index<span class="selector-class">.html</span></div><div class="line">INFO  Generated: index<span class="selector-class">.html</span></div><div class="line">INFO  <span class="number">28</span> files generated <span class="keyword">in</span> <span class="number">934</span> ms</div><div class="line">INFO  Deploying: git</div><div class="line">INFO  Clearing <span class="selector-class">.deploy</span> folder...</div><div class="line">INFO  Copying files from public folder...</div><div class="line">[master <span class="number">0461143</span>] Site updated: <span class="number">2015</span>-<span class="number">11</span>-<span class="number">18</span> <span class="number">15</span>:<span class="number">45</span>:<span class="number">37</span></div><div class="line"> <span class="number">5</span> files changed, <span class="number">77</span> insertions(+), <span class="number">57</span> deletions(-)</div><div class="line">To git@github<span class="selector-class">.com</span>:huyanshan/huyanshan<span class="selector-class">.github</span><span class="selector-class">.io</span><span class="selector-class">.git</span></div><div class="line">   <span class="number">83</span>bcee0..<span class="number">0461143</span>  master -&gt; master</div><div class="line">Branch master set up to track remote branch master from git@github<span class="selector-class">.com</span>:huyanshan/huyanshan<span class="selector-class">.github</span><span class="selector-class">.io</span><span class="selector-class">.git</span>.</div><div class="line">INFO  Deploy done: git</div></pre></td></tr></table></figure>
+<p>PS：又发现了一篇介绍hexo3.0的文章，很不错。<a href="http://www.tuicool.com/articles/Jva2iaA" target="_blank" rel="external">Hexo 3.0 静态博客使用指南</a><br>还有一篇<a href="http://www.jianshu.com/p/05289a4bc8b2#" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></p>
+
+      
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="copyright">
+  <p><span>本文标题:</span><a href="/2015/11/25/hexo-built/">记一次折腾-搭建hexo博客并部署到github</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Yanshan 的个人博客">Yanshan</a></p>
+  <p><span>发布时间:</span>2015年11月25日 - 15时24分</p>
+  <p><span>最后更新:</span>2016年08月17日 - 15时28分</p>
+  <p>
+    <span>原始链接:</span><a href="/2015/11/25/hexo-built/" title="记一次折腾-搭建hexo博客并部署到github">http://huyanshan.com/2015/11/25/hexo-built/</a>
+    <span class="btn" data-clipboard-text="原文: http://huyanshan.com/2015/11/25/hexo-built/　　作者: Yanshan" title="点击复制文章链接">
+        <i class="fa fa-clipboard"></i>
+    </span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
+  <script src="/js/clipboard.min.js"></script>
+  <script> var clipboard = new Clipboard('.btn'); </script>
+</div>
+<style type="text/css">
+  .copyright p .btn {
+    margin-left: 1em;
+  }
+  .copyright:hover p .btn::after {
+    content: "复制"
+  }
+  .copyright p .btn:hover {
+      color: gray;
+      cursor: pointer;
+    };
+</style>
+
+
+
+<nav id="article-nav">
+  
+    <div id="article-nav-newer" class="article-nav-title">
+      <a href="/2015/11/27/hexo-built2/">
+        记一次折腾-搭建hexo博客并部署到github（二）
+      </a>
+    </div>
+  
+  
+</nav>
+
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+<strong class="toc-title">文章目录</strong>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装nodejs"><span class="toc-number">1.</span> <span class="toc-text">安装nodejs</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-number">1.1.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化hexo"><span class="toc-number">1.2.</span> <span class="toc-text">初始化hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署到github"><span class="toc-number">1.3.</span> <span class="toc-text">部署到github</span></a></li></ol></li></ol>
+</div>
+<style type="text/css">
+  .left-col .switch-btn {
+    display: none;
+  }
+  .left-col .switch-area {
+    display: none;
+  }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+  var toc_button= document.getElementById("tocButton");
+  var toc_div= document.getElementById("toc");
+  /* Show or hide toc when click on tocButton.
+  通过点击设置的按钮显示或者隐藏文章目录.*/
+  toc_button.onclick=function(){
+  if(toc_div.style.display=="none"){
+  toc_div.style.display="block";
+  toc_button.value="隐藏目录";
+  document.getElementById("switch-btn").style.display="none";
+  document.getElementById("switch-area").style.display="none";
+  }
+  else{
+  toc_div.style.display="none";
+  toc_button.value="显示目录";
+  document.getElementById("switch-btn").style.display="block";
+  document.getElementById("switch-area").style.display="block";
+  }
+  }
+</script>
+
+
+<div class="share">
+	<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+	<a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+	</div>
+	<script>
+	window._bd_share_config={
+		"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2015/11/25/hexo-built/" data-title="记一次折腾-搭建hexo博客并部署到github" data-url="http://huyanshan.com/2015/11/25/hexo-built/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"huyanshan"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#ds-thread" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+  
+    <div  class="post-nav-button">
+    <a href="/2015/11/27/hexo-built2/" title="上一篇: 记一次折腾-搭建hexo博客并部署到github（二）">
+    <i class="fa fa-angle-left"></i>
+    </a>
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    </div>
+  
+  
+    
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+        
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 Yanshan
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+  <style>
+    body {
+      background: lightgray;
+    }
+    #container .left-col {
+      background: white;
+    }
+    .article-inner {
+      background: white;
+    }
+    .post-nav-button {
+      background: #ececec;
+    }
+    #header .header-nav .social #GitHub {
+      background-color: #bfd3ec;
+    }
+  </style>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
