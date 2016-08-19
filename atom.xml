@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://huyanshan.com/"/>
-  <updated>2016-08-19T07:03:05.000Z</updated>
+  <updated>2016-08-19T07:05:15.000Z</updated>
   <id>http://huyanshan.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://huyanshan.com/2016/08/19/head-%E4%B8%AD%E5%8A%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E9%9B%86%E6%95%88%E6%9E%9C/"/>
     <id>http://huyanshan.com/2016/08/19/head-中加入字符集效果/</id>
     <published>2016-08-19T07:02:18.000Z</published>
-    <updated>2016-08-19T07:03:05.000Z</updated>
+    <updated>2016-08-19T07:05:15.000Z</updated>
     
-    <content type="html"><![CDATA[<p>今天深刻的体会到了<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>的作用。以前居然没发现，太小白了。。。</p>
+    <content type="html"><![CDATA[<p>今天深刻的体会到了<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>的作用。以前居然没发现，太小白了。。。<br><a id="more"></a></p>
 <p>加<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
 <p><img src="http://static.zybuluo.com/Yanshan/hwwyo5g7igm7eva3g4pei1sz/jiameta1.jpg" alt="jiameta1.jpg-7.5kB"></p>
 <p>不加<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
@@ -31,8 +31,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;今天深刻的体会到了&lt;code&gt;&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&lt;/code&gt;的作用。以前居然没发现，太小白了。。。&lt;/p&gt;
-&lt;p&gt;加&lt;code&gt;&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&lt;/cod
+      &lt;p&gt;今天深刻的体会到了&lt;code&gt;&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&lt;/code&gt;的作用。以前居然没发现，太小白了。。。&lt;br&gt;
     
     </summary>
     
@@ -144,7 +143,7 @@
     <link href="http://huyanshan.com/2015/11/27/hexo-built2/"/>
     <id>http://huyanshan.com/2015/11/27/hexo-built2/</id>
     <published>2015-11-27T15:43:51.000Z</published>
-    <updated>2016-08-17T07:28:03.000Z</updated>
+    <updated>2016-08-19T07:04:45.000Z</updated>
     
     <content type="html"><![CDATA[<p>上次搭完博客后，当然不仅仅满足于此，个人最爱的还是换主题，另外还有几个不太明白的地方。</p>
 <ul>
