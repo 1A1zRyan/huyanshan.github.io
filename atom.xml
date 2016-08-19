@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://huyanshan.com/"/>
-  <updated>2016-08-17T08:47:43.000Z</updated>
+  <updated>2016-08-19T07:03:05.000Z</updated>
   <id>http://huyanshan.com/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;head&gt;中加入字符集效果</title>
+    <link href="http://huyanshan.com/2016/08/19/head-%E4%B8%AD%E5%8A%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E9%9B%86%E6%95%88%E6%9E%9C/"/>
+    <id>http://huyanshan.com/2016/08/19/head-中加入字符集效果/</id>
+    <published>2016-08-19T07:02:18.000Z</published>
+    <updated>2016-08-19T07:03:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天深刻的体会到了<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>的作用。以前居然没发现，太小白了。。。</p>
+<p>加<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
+<p><img src="http://static.zybuluo.com/Yanshan/hwwyo5g7igm7eva3g4pei1sz/jiameta1.jpg" alt="jiameta1.jpg-7.5kB"></p>
+<p>不加<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
+<p><img src="http://static.zybuluo.com/Yanshan/e2g7noh9p2hukyphx0lyjy6o/%E4%B8%8D%E5%8A%A0meta.jpg" alt="不加meta.jpg-8.4kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天深刻的体会到了&lt;code&gt;&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&lt;/code&gt;的作用。以前居然没发现，太小白了。。。&lt;/p&gt;
+&lt;p&gt;加&lt;code&gt;&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&lt;/cod
+    
+    </summary>
+    
+      <category term="前端" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://huyanshan.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo迁移</title>
