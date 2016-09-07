@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://huyanshan.com/"/>
-  <updated>2016-08-19T07:05:15.000Z</updated>
+  <updated>2016-09-07T07:57:31.000Z</updated>
   <id>http://huyanshan.com/</id>
   
   <author>
@@ -14,6 +14,143 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>wangyebuju</title>
+    <link href="http://huyanshan.com/2016/09/07/wangyebuju/"/>
+    <id>http://huyanshan.com/2016/09/07/wangyebuju/</id>
+    <published>2016-09-07T07:55:56.000Z</published>
+    <updated>2016-09-07T07:57:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、<br>W3C标准包括：</p>
+<ul>
+<li>结构化标准语言（HTML XML） </li>
+<li>表现标准语言(CSS) </li>
+<li>行为标准语言(DOM ECMAScript)</li>
+</ul>
+<p>倡导结构、样式、行为分离</p>
+<p>二、CSS3种定位机制</p>
+<ul>
+<li>标准文档流（Normal flow）</li>
+<li>浮动（Floats）</li>
+<li>绝对定位（Absolute positioning）</li>
+</ul>
+<p>三、标准文档流</p>
+<p>特点：</p>
+<ul>
+<li>从上到下，从左到右，输出文档内容</li>
+<li>由块级元素和行级元素组成</li>
+</ul>
+<p>块级元素：</p>
+<ul>
+<li>从左到右撑满页面，独占一行</li>
+<li>触碰到页面边缘时，会自动换行</li>
+<li>常见：div，ul，li，dl，dt，p…</li>
+</ul>
+<p>行级元素：</p>
+<ul>
+<li>能在同一行内显示</li>
+<li>不会改变HTML文档结构</li>
+<li>常见：span，strong，img，input</li>
+</ul>
+<p>块级元素和行级元素都是盒子模型</p>
+<p><img src="http://static.zybuluo.com/Yanshan/6rhjkq7ub2j4cru1srzksgx4/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-09-05%20%E4%B8%8B%E5%8D%884.24.38.png" alt="屏幕快照 2016-09-05 下午4.24.38.png-175.1kB"><br><img src="http://static.zybuluo.com/Yanshan/23ljfy1v2jsmn0mum8g0i35y/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-09-05%20%E4%B8%8B%E5%8D%884.24.21.png" alt="屏幕快照 2016-09-05 下午4.24.21.png-383.9kB"></p>
+<p>盒子模型尺寸=边框+外边距+内边距+盒子内容尺寸</p>
+<p>如果想让页面自动居中，当设置margin属性为auto时，不能再设置浮动或者绝对定位属性</p>
+<p>float属性：</p>
+<ul>
+<li>left </li>
+<li>right</li>
+<li>none</li>
+</ul>
+<p>特点：</p>
+<ul>
+<li>元素会左移或者右移，直至触碰到容器位置，仍旧处于标准文档流中</li>
+<li>当元素没有设置宽度值，而设置了浮动属性，元素的宽度会随内容的变化而变化</li>
+<li>当元素设置浮动属性后，会对相邻的元素产生影响，相邻元素特指紧邻后面的元素</li>
+</ul>
+<p>清除浮动：</p>
+<ul>
+<li>clear属性<ul>
+<li>clear:both (常用)</li>
+<li>clear:left</li>
+<li>clear:right</li>
+</ul>
+</li>
+<li>同时设置width:100%(或者固定宽度)+overflow:hidden;</li>
+<li>不建议使用空标签清除浮动</li>
+</ul>
+<p>横向两列布局：</p>
+<ul>
+<li>float属性：使纵向排列的块级元素横向排列</li>
+<li>margin属性：设置两列之间的间距</li>
+<li>当父包含块缩成一条时，用clear:both方法清除浮动无效，它一般用于紧邻后面的元素的清除浮动</li>
+<li>div高度一般不设置</li>
+</ul>
+<p>position属性</p>
+<p>3种定位形式：</p>
+<ul>
+<li>静态定位</li>
+<li>相对定位</li>
+<li>绝对定位</li>
+</ul>
+<p>4个属性值：</p>
+<ul>
+<li>static 静态定位</li>
+<li>relative 相对定位</li>
+<li>absolute 绝对定位</li>
+<li>fixed 固定定位</li>
+</ul>
+<p>相对定位：</p>
+<ul>
+<li>相对于自身原有位置进行偏移</li>
+<li>仍处于标准文档流中</li>
+<li>拥有偏移属性和z-index属性</li>
+</ul>
+<p>绝对定位：</p>
+<ul>
+<li>建立了以包含块为基准的定位</li>
+<li>完全脱离了标准文档流</li>
+<li>拥有偏移属性和z-index属性</li>
+<li>未设置偏移量：<ul>
+<li>无论是否存在已经定位的祖先元素，都保持在元素初始位置</li>
+<li>脱离了标准文档流</li>
+</ul>
+</li>
+<li>设置偏移量：<ul>
+<li>无已定位祖先元素：以<html>为偏移参照基准</html></li>
+<li>有已定位祖先元素：以距其最近的已定位元素为偏移参照基准</li>
+</ul>
+</li>
+</ul>
+<p>绝对定位实现横向两列布局：</p>
+<ul>
+<li>常用于一列固定宽度，另一列宽度自适应的情况</li>
+<li>relative：父元素相对定位</li>
+<li>absolute：自适应宽度元素绝对定位</li>
+<li>固定宽度列的高度&gt;自适应宽度的列</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一、&lt;br&gt;W3C标准包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;结构化标准语言（HTML XML） &lt;/li&gt;
+&lt;li&gt;表现标准语言(CSS) &lt;/li&gt;
+&lt;li&gt;行为标准语言(DOM ECMAScript)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;倡导结构、样式、行为分离&lt;/p&gt;
+&lt;p&gt;二、
+    
+    </summary>
+    
+      <category term="前端" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://huyanshan.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>&lt;head&gt;中加入字符集效果</title>
