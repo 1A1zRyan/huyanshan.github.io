@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://huyanshan.com/"/>
-  <updated>2016-09-14T06:50:11.000Z</updated>
+  <updated>2016-09-14T06:52:40.000Z</updated>
   <id>http://huyanshan.com/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://huyanshan.com/2016/09/14/js%E9%A1%B5%E9%9D%A2%E4%BA%A4%E4%BA%92/"/>
     <id>http://huyanshan.com/2016/09/14/js页面交互/</id>
     <published>2016-09-14T06:48:39.000Z</published>
-    <updated>2016-09-14T06:50:11.000Z</updated>
+    <updated>2016-09-14T06:52:40.000Z</updated>
     
     <content type="html"><![CDATA[<ol>
 <li>输出内容<br>document.write(str);</li>
-<li>警告框<br>alert(str);<a id="more"></a></li>
+<li>警告框<br>alert(str);</li>
 <li><p>确认框<br>confirm(str);<br>返回值：</p>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Boolean</span>值，当用户点击OK按钮时，返回<span class="keyword">true</span></div><div class="line">当用户点击Cancel按钮时，返回<span class="keyword">false</span></div></pre></td></tr></table></figure>
 </li>
@@ -34,7 +34,7 @@
 </ol>
 <p>返回值<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1. </span>点击确定按钮，文本框中的内容将作为函数返回值</div><div class="line"><span class="bullet">2. </span>点击取消按钮，将返回null</div></pre></td></tr></table></figure></p>
 <p>5.打开新窗口<br>window.open([URL],窗口名,参数字符串)<br>参数说明<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">URL：可选参数，在窗口中要显示网页的网址或路径。如果省略这个参数，或者它的值是空字符串，那么窗口就不显示任何文档。</div><div class="line">窗口名称：可选参数，被打开窗口的名称。</div><div class="line">    <span class="number">1.</span>该名称由字母、数字和下划线字符组成。</div><div class="line">    <span class="number">2.</span><span class="string">"_top"</span>、<span class="string">"_blank"</span>、<span class="string">"_selft"</span>具有特殊意义的名称。</div><div class="line">       _blank：在新窗口显示目标网页</div><div class="line">       _self：在当前窗口显示目标网页</div><div class="line">       _top：框架网页中在上部窗口中显示目标网页</div><div class="line">    <span class="number">3.</span>相同 name 的窗口只能创建一个，要想创建多个窗口则 name 不能相同。</div><div class="line">    <span class="number">4.</span>name 不能包含有空格。</div><div class="line">参数字符串：可选参数，设置窗口参数，各参数用逗号隔开。</div></pre></td></tr></table></figure></p>
-<p>![52e3677900013d6a05020261.jpg-27.5kB][1]</p>
+<p><img src="http://static.zybuluo.com/Yanshan/t2gf17me3xognh66wj6ubsbh/52e3677900013d6a05020261.jpg" alt="52e3677900013d6a05020261.jpg-27.5kB"></p>
 <p>例如:打开<a href="http://www.imooc.com网站，大小为300px" target="_blank" rel="external">http://www.imooc.com网站，大小为300px</a> * 200px，无菜单，无工具栏，无状态栏，有滚动条窗口：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt; <span class="built_in">window</span>.open(<span class="string">'http://www.imooc.com'</span>,<span class="string">'_blank'</span>,<span class="string">'width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes'</span>)</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
 <p>注意：运行结果考虑浏览器兼容问题。</p>
 <p>6.关闭窗口<br>window.close();  //关闭本窗口<br>或者<br>&lt;窗口对象&gt;.close();//关闭指定窗口</p>
@@ -46,7 +46,9 @@
     
       &lt;ol&gt;
 &lt;li&gt;输出内容&lt;br&gt;document.write(str);&lt;/li&gt;
-&lt;li&gt;警告框&lt;br&gt;alert(str);
+&lt;li&gt;警告框&lt;br&gt;alert(str);&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;确认框&lt;br&gt;confirm(str);&lt;br&gt;返回值：&lt;/p&gt;
+&lt;figure class=&quot;highlight grad
     
     </summary>
     
