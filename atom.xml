@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://huyanshan.com/"/>
-  <updated>2016-09-12T08:24:33.000Z</updated>
+  <updated>2016-09-14T06:50:11.000Z</updated>
   <id>http://huyanshan.com/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS页面交互</title>
+    <link href="http://huyanshan.com/2016/09/14/js%E9%A1%B5%E9%9D%A2%E4%BA%A4%E4%BA%92/"/>
+    <id>http://huyanshan.com/2016/09/14/js页面交互/</id>
+    <published>2016-09-14T06:48:39.000Z</published>
+    <updated>2016-09-14T06:50:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li>输出内容<br>document.write(str);</li>
+<li>警告框<br>alert(str);<a id="more"></a></li>
+<li><p>确认框<br>confirm(str);<br>返回值：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Boolean</span>值，当用户点击OK按钮时，返回<span class="keyword">true</span></div><div class="line">当用户点击Cancel按钮时，返回<span class="keyword">false</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>提问<br>prompt(str1, str2);<br>参数说明</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">str1: </span>要显示在消息对话框中的文本，不可修改</div><div class="line"><span class="keyword">str2：文本框中的内容，可以修改</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回值<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1. </span>点击确定按钮，文本框中的内容将作为函数返回值</div><div class="line"><span class="bullet">2. </span>点击取消按钮，将返回null</div></pre></td></tr></table></figure></p>
+<p>5.打开新窗口<br>window.open([URL],窗口名,参数字符串)<br>参数说明<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">URL：可选参数，在窗口中要显示网页的网址或路径。如果省略这个参数，或者它的值是空字符串，那么窗口就不显示任何文档。</div><div class="line">窗口名称：可选参数，被打开窗口的名称。</div><div class="line">    <span class="number">1.</span>该名称由字母、数字和下划线字符组成。</div><div class="line">    <span class="number">2.</span><span class="string">"_top"</span>、<span class="string">"_blank"</span>、<span class="string">"_selft"</span>具有特殊意义的名称。</div><div class="line">       _blank：在新窗口显示目标网页</div><div class="line">       _self：在当前窗口显示目标网页</div><div class="line">       _top：框架网页中在上部窗口中显示目标网页</div><div class="line">    <span class="number">3.</span>相同 name 的窗口只能创建一个，要想创建多个窗口则 name 不能相同。</div><div class="line">    <span class="number">4.</span>name 不能包含有空格。</div><div class="line">参数字符串：可选参数，设置窗口参数，各参数用逗号隔开。</div></pre></td></tr></table></figure></p>
+<p>![52e3677900013d6a05020261.jpg-27.5kB][1]</p>
+<p>例如:打开<a href="http://www.imooc.com网站，大小为300px" target="_blank" rel="external">http://www.imooc.com网站，大小为300px</a> * 200px，无菜单，无工具栏，无状态栏，有滚动条窗口：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt; <span class="built_in">window</span>.open(<span class="string">'http://www.imooc.com'</span>,<span class="string">'_blank'</span>,<span class="string">'width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes'</span>)</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<p>注意：运行结果考虑浏览器兼容问题。</p>
+<p>6.关闭窗口<br>window.close();  //关闭本窗口<br>或者<br>&lt;窗口对象&gt;.close();//关闭指定窗口</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">   <span class="keyword">var</span> mywin=<span class="built_in">window</span>.open(<span class="string">'http://www.imooc.com'</span>); <span class="comment">//将新打的窗口对象，存储在变量mywin中</span></div><div class="line">   mywin.close();</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>注意:上面代码在打开新窗口的同时，关闭该窗口，看不到被打开的窗口。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;输出内容&lt;br&gt;document.write(str);&lt;/li&gt;
+&lt;li&gt;警告框&lt;br&gt;alert(str);
+    
+    </summary>
+    
+      <category term="前端 慕课网" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF-%E6%85%95%E8%AF%BE%E7%BD%91/"/>
+    
+    
+      <category term="前端" scheme="http://huyanshan.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>慕课网导航条教程笔记</title>
