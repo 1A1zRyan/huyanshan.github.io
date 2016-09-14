@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://huyanshan.com/"/>
-  <updated>2016-09-14T06:52:40.000Z</updated>
+  <updated>2016-09-14T07:01:49.000Z</updated>
   <id>http://huyanshan.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://huyanshan.com/2016/09/14/js%E9%A1%B5%E9%9D%A2%E4%BA%A4%E4%BA%92/"/>
     <id>http://huyanshan.com/2016/09/14/js页面交互/</id>
     <published>2016-09-14T06:48:39.000Z</published>
-    <updated>2016-09-14T06:52:40.000Z</updated>
+    <updated>2016-09-14T07:01:49.000Z</updated>
     
     <content type="html"><![CDATA[<ol>
 <li>输出内容<br>document.write(str);</li>
@@ -52,10 +52,10 @@
     
     </summary>
     
-      <category term="前端 慕课网" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF-%E6%85%95%E8%AF%BE%E7%BD%91/"/>
+      <category term="前端" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://huyanshan.com/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="慕课网学习笔记" scheme="http://huyanshan.com/tags/%E6%85%95%E8%AF%BE%E7%BD%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -64,7 +64,7 @@
     <link href="http://huyanshan.com/2016/09/12/mooc/"/>
     <id>http://huyanshan.com/2016/09/12/mooc/</id>
     <published>2016-09-12T08:23:21.000Z</published>
-    <updated>2016-09-12T08:24:33.000Z</updated>
+    <updated>2016-09-14T07:02:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>1.通常用什么标签构建导航条菜单？<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">无序列表&lt;ul&gt;<span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></div></pre></td></tr></table></figure></p>
 <p>例如：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>新闻<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
@@ -82,10 +82,10 @@
     
     </summary>
     
-      <category term="前端 mooc教程" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF-mooc%E6%95%99%E7%A8%8B/"/>
+      <category term="前端" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="mooc教程" scheme="http://huyanshan.com/tags/mooc%E6%95%99%E7%A8%8B/"/>
+      <category term="慕课网学习笔记" scheme="http://huyanshan.com/tags/%E6%85%95%E8%AF%BE%E7%BD%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -94,7 +94,7 @@
     <link href="http://huyanshan.com/2016/09/07/wangyebuju/"/>
     <id>http://huyanshan.com/2016/09/07/wangyebuju/</id>
     <published>2016-09-07T07:55:56.000Z</published>
-    <updated>2016-09-07T08:04:30.000Z</updated>
+    <updated>2016-09-14T07:02:51.000Z</updated>
     
     <content type="html"><![CDATA[<p>一、<br>W3C标准包括：</p>
 <ul>
@@ -217,10 +217,10 @@
     
     </summary>
     
-      <category term="慕课网学习笔记" scheme="http://huyanshan.com/categories/%E6%85%95%E8%AF%BE%E7%BD%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="前端" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://huyanshan.com/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="慕课网学习笔记" scheme="http://huyanshan.com/tags/%E6%85%95%E8%AF%BE%E7%BD%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -229,7 +229,7 @@
     <link href="http://huyanshan.com/2016/08/19/head-%E4%B8%AD%E5%8A%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E9%9B%86%E6%95%88%E6%9E%9C/"/>
     <id>http://huyanshan.com/2016/08/19/head-中加入字符集效果/</id>
     <published>2016-08-19T07:02:18.000Z</published>
-    <updated>2016-08-19T07:05:15.000Z</updated>
+    <updated>2016-09-14T07:03:22.000Z</updated>
     
     <content type="html"><![CDATA[<p>今天深刻的体会到了<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>的作用。以前居然没发现，太小白了。。。<br><a id="more"></a></p>
 <p>加<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
@@ -247,7 +247,7 @@
       <category term="前端" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://huyanshan.com/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="知识点" scheme="http://huyanshan.com/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
   </entry>
   
