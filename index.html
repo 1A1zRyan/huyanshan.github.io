@@ -158,6 +158,118 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-DOM操作" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/20/DOM操作/" class="article-date">
+  	<time datetime="2016-09-20T07:22:53.000Z" itemprop="datePublished">2016-09-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/20/DOM操作/">DOM操作</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p>[TOC]</p>
+<h2 id="认识DOM"><a href="#认识DOM" class="headerlink" title="认识DOM"></a>认识DOM</h2><p>文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。</p>
+<h6 id="如下图代码"><a href="#如下图代码" class="headerlink" title="如下图代码"></a>如下图代码</h6><p><img src="http://static.zybuluo.com/Yanshan/q9dskdwg8cm2610ba1ymgee6/52e4be610001c67307860420.jpg" alt="52e4be610001c67307860420.jpg-42.2kB"></p>
+<h6 id="将HTML分解为DOM节点层次图"><a href="#将HTML分解为DOM节点层次图" class="headerlink" title="将HTML分解为DOM节点层次图"></a>将HTML分解为DOM节点层次图</h6><p><img src="http://static.zybuluo.com/Yanshan/c50280ceoqhnb0zpjuqmfbt6/52e4bd0f0001dd8d04830279.jpg" alt="52e4bd0f0001dd8d04830279.jpg-11.2kB"></p>
+<h6 id="HTML文档可以看座由节点构成"><a href="#HTML文档可以看座由节点构成" class="headerlink" title="HTML文档可以看座由节点构成"></a>HTML文档可以看座由节点构成</h6><p>常见的有三种节点：</p>
+<ol>
+<li>元素节点：上图中<code>&lt;html&gt; &lt;body&gt; &lt;p&gt;</code>等都是元素节点，即标签。</li>
+<li>文本节点：向用户展示的内容，如<code>&lt;li&gt;...&lt;/li&gt;</code>中的JavaScript、DOM、CSS等文本。</li>
+<li>属性节点：元素属性，如<code>&lt;a&gt;</code>标签的链接属性href=”<a href="http://www.imooc.com" target="_blank" rel="external">http://www.imooc.com</a>“</li>
+</ol>
+<h2 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h2><h4 id="通过ID获取元素"><a href="#通过ID获取元素" class="headerlink" title="通过ID获取元素"></a>通过ID获取元素</h4><h6 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h6><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementById(“<span class="built_in">id</span>”)</div></pre></td></tr></table></figure>
+<p>这一段代码：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>document.getElementById<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"con"</span>&gt;</span>JavaScript<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> mychar= <span class="built_in">document</span>.getElementById(<span class="string">"con"</span>).innerHTML;</div><div class="line">  <span class="built_in">document</span>.write(<span class="string">"结果:"</span>+mychar); <span class="comment">//输出获取的P标签。 </span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>获取的是p标签，输出结果:[object HTMLParagraphElement]。获取的元素是一个对象，如想对元素进行操作，我们要通过它的属性或方法。</p>
+<h4 id="innerHTML属性"><a href="#innerHTML属性" class="headerlink" title="innerHTML属性"></a>innerHTML属性</h4><p>innerHTML 属性用于获取或替换 HTML 元素的内容。<br>语法：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Object</span><span class="selector-class">.innerHTML</span></div></pre></td></tr></table></figure></p>
+<p>注意：<br>1.Object是获取的元素对象，如通过document.getElementById(“ID”)获取的元素。<br>2.注意书写，innerHTML区分大小写。<br>通过id=”con”获取<code>&lt;p&gt;</code> 元素，并将元素的内容输出和改变元素内容，代码如下:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>innerHTML<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">"con"</span>&gt;</span>javascript<span class="tag">&lt;/<span class="name">H2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span> JavaScript是一种基于对象、事件驱动的简单脚本语言，嵌入在HTML文档中，由浏览器负责解释和执行，在网页上产生动态的显示效果并实现与用户交互功能。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> mychar= <span class="built_in">document</span>.getElementById(<span class="string">"con"</span>);</div><div class="line">  <span class="built_in">document</span>.write(<span class="string">"原标题:"</span>+mychar.innerHTML+<span class="string">"&lt;br&gt;"</span>); <span class="comment">//输出原h2标签内容</span></div><div class="line">  mychar.innerHTML = <span class="string">"Hello World"</span>;</div><div class="line">  <span class="built_in">document</span>.write(<span class="string">"修改后的标题:"</span>+mychar.innerHTML); <span class="comment">//输出修改后h2标签内容</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h4 id="改变HTML样式"><a href="#改变HTML样式" class="headerlink" title="改变HTML样式"></a>改变HTML样式</h4><p>语法：<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.<span class="built_in">style</span>.property=<span class="built_in">new</span> <span class="built_in">style</span>;</div></pre></td></tr></table></figure></p>
+<p>其中：Object是获取的元素对象，如通过document.getElementById(“id”)获取的元素。</p>
+<p>改变 <code>&lt;p&gt;</code>元素的样式，将颜色改为红色，字号改为20,背景颜色改为蓝：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"pcon"</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">   <span class="keyword">var</span> mychar = <span class="built_in">document</span>.getElementById(<span class="string">"pcon"</span>);</div><div class="line">   mychar.style.color=<span class="string">"red"</span>;</div><div class="line">   mychar.style.fontSize=<span class="string">"20"</span>;</div><div class="line">   mychar.style.backgroundColor =<span class="string">"blue"</span>;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h4 id="显示和隐藏-display属性"><a href="#显示和隐藏-display属性" class="headerlink" title="显示和隐藏(display属性)"></a>显示和隐藏(display属性)</h4><p>语法：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object<span class="selector-class">.style</span><span class="selector-class">.display</span> = value</div></pre></td></tr></table></figure></p>
+<p>其中：Object是获取的元素对象，如通过document.getElementById(“id”)获取的元素。<br>value取值：</p>
+<ul>
+<li>name，表示此元素被隐藏</li>
+<li>block，表示显示为块级元素</li>
+</ul>
+<h4 id="控制类名（className属性）"><a href="#控制类名（className属性）" class="headerlink" title="控制类名（className属性）"></a>控制类名（className属性）</h4><p>语法:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">object</span><span class="selector-class">.className</span> = classname</div></pre></td></tr></table></figure></p>
+<p>作用:</p>
+<ol>
+<li>获取元素的class 属性</li>
+<li>为网页内的某个元素指定一个css样式来更改该元素的外观<br>示例：</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=gb2312"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>className属性<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">    <span class="selector-tag">body</span>&#123; <span class="attribute">font-size</span>:<span class="number">16px</span>;&#125;</div><div class="line">    <span class="selector-class">.one</span>&#123;</div><div class="line">        <span class="attribute">color</span>:red;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.two</span>&#123;</div><div class="line">        <span class="attribute">color</span>:blue;</div><div class="line">    &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"p1"</span> &gt;</span> 段落1。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"添加样式"</span> <span class="attr">onclick</span>=<span class="string">"add()"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"p2"</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span>段落2.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"更改外观"</span> <span class="attr">onclick</span>=<span class="string">"modify()"</span>/&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</div><div class="line">          <span class="keyword">var</span> p1 = <span class="built_in">document</span>.getElementById(<span class="string">"p1"</span>);</div><div class="line">          p1.className = <span class="string">"one"</span>;</div><div class="line">       &#125;</div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">modify</span>(<span class="params"></span>)</span>&#123;</div><div class="line">          <span class="keyword">var</span> p2 = <span class="built_in">document</span>.getElementById(<span class="string">"p2"</span>);</div><div class="line">          p2.className = <span class="string">"two"</span>;</div><div class="line">       &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/前端/">前端</a>
+	</div>
+
+
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/慕课网学习笔记/">慕课网学习笔记</a></li></ul>
+	</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: true,
+        isPost: false,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+        
+
+  
     <article id="post-js页面交互" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
