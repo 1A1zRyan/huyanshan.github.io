@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://huyanshan.com/"/>
-  <updated>2016-09-20T07:25:36.000Z</updated>
+  <updated>2016-09-27T08:15:04.000Z</updated>
   <id>http://huyanshan.com/</id>
   
   <author>
@@ -14,6 +14,418 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js变量和操作符</title>
+    <link href="http://huyanshan.com/2016/09/27/js%E5%8F%98%E9%87%8F%E5%92%8C%E6%93%8D%E4%BD%9C%E7%AC%A6/"/>
+    <id>http://huyanshan.com/2016/09/27/js变量和操作符/</id>
+    <published>2016-09-27T08:12:54.000Z</published>
+    <updated>2016-09-27T08:15:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>[TOC]</p>
+<h3 id="变量命名规则"><a href="#变量命名规则" class="headerlink" title="变量命名规则"></a>变量命名规则</h3><ol>
+<li><p>必须以字母、下划线或美元符号开头，后面可以跟字母、下划线、美元符号和数字</p>
+</li>
+<li><p>变量名区分大小写，如:A与a是两个不同变量。</p>
+</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li>不允许使用JavaScript保留关键字做变量名：</li>
+</ol>
+<ul>
+<li>abstract、arguments</li>
+<li>boolean、break、byte</li>
+<li>case、catch、char、class*、const、continue</li>
+<li>debugger、default、delete、do、double</li>
+<li>else、enum<em>、eval、export</em>、extends*</li>
+<li>false、final、finally、float、for、function</li>
+<li>goto</li>
+<li>if、implements、import*、in、instanceof、int、interface</li>
+<li>let、long</li>
+<li>native、new、null</li>
+<li>package、private、protected、public</li>
+<li>return</li>
+<li>short、static、super*、switch、synchronized</li>
+<li>this、throw、throws、transient、true、try、typeof</li>
+<li>var、void、volatile</li>
+<li>while、with</li>
+<li>yield </li>
+</ul>
+<ol>
+<li>不能用JavaScript 内置的对象、属性和方法的名称作为 Javascript 的变量或函数名：</li>
+</ol>
+<ul>
+<li>Array</li>
+<li>Date、eval</li>
+<li>function</li>
+<li>hasOwnProperty</li>
+<li>Infinity</li>
+<li>isFinite、isNaN、isPrototypeOf</li>
+<li>length</li>
+<li>Math</li>
+<li>NaN、name、Number</li>
+<li>Object</li>
+<li>prototype</li>
+<li>String</li>
+<li>toString</li>
+<li>undefined</li>
+<li>valueOf</li>
+</ul>
+<h3 id="变量赋值"><a href="#变量赋值" class="headerlink" title="变量赋值"></a>变量赋值</h3><p>使用<code>=</code>来赋值<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">123</span>;       <span class="comment">// 123是数值</span></div><div class="line"><span class="keyword">var</span> num2 = <span class="string">"123"</span>;    <span class="comment">//"一二三"是字符串,要用“”引起来</span></div><div class="line"><span class="keyword">var</span> num3=<span class="literal">true</span>;    <span class="comment">//布尔值true（真），false(假)</span></div></pre></td></tr></table></figure></p>
+<h3 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h3><p>表达式是指具有一定的值、用操作符把常数和变量连接起来的代数式。一个表达式可以包含常数或变量。<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> <span class="string">"this"</span>+<span class="string">"is"</span>+<span class="string">"js"</span></div><div class="line"><span class="number">2.</span> <span class="string">"this"</span> + str</div><div class="line"><span class="number">3.</span> num + <span class="number">2</span>*<span class="number">3</span></div><div class="line"><span class="number">4.</span> <span class="number">3</span>+<span class="number">2</span></div><div class="line"><span class="number">5.</span> <span class="number">1</span>&gt;<span class="number">2</span></div><div class="line"><span class="number">6.</span> num == <span class="number">1</span></div><div class="line"><span class="number">7.</span> num &lt; <span class="number">50</span></div></pre></td></tr></table></figure></p>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><p>运算符<code>=</code>用于赋值。<br>运算符<code>+</code>用于加值。</p>
+<h5 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h5><p>算术运算符用于执行变量与/或值之间的算术运算。<br>给定 y=5，下面的表格解释了这些算术运算符<br>| 运算符 | 描述 | 例子 | 结果 |<br>|——  |  —-|  —-|  —-|<br>|+       |  加  | x=y+2|   x=7|<br>|-       |  减  | x=y-2|   x=3|<br>|<em>|乘|x=y</em>2|x=10|<br>|/|除|x=y/2|x=2.5|<br>|%|求余数 (保留整数)|x=y%2|x=1|<br>|++|累加|x=++y|x=6|<br>|–|递减|x=–y|x=4|</p>
+<h5 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h5><p>赋值运算符用于给 JavaScript 变量赋值。<br>给定 x=10 和 y=5，下面的表格解释了赋值运算符：</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>例子</th>
+<th>等价于</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>x=y</td>
+<td></td>
+<td>x=5</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>x+=y</td>
+<td>x=x+y</td>
+<td>x=15</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>x-=y</td>
+<td>x=x-y</td>
+<td>x=5</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>x*=y</td>
+<td>x=x*y</td>
+<td>x=50</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>x/=y</td>
+<td>x=x/y</td>
+<td>x=2</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>x%=y</td>
+<td>x=x%y</td>
+<td>x=0</td>
+</tr>
+</tbody>
+</table>
+<h5 id="用于字符串的-运算符"><a href="#用于字符串的-运算符" class="headerlink" title="用于字符串的 + 运算符"></a>用于字符串的 + 运算符</h5><p><code>+</code> 运算符用于把文本值或字符串变量加起来（连接起来）。<br>如需把两个或多个字符串变量连接起来，请使用<code>+</code>运算符。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">txt1</span>=<span class="string">"What a very"</span>;</div><div class="line"><span class="attr">txt2</span>=<span class="string">"nice day"</span>;</div><div class="line"><span class="attr">txt3</span>=txt1+txt2;</div></pre></td></tr></table></figure></p>
+<p>在以上语句执行后，变量 txt3 包含的值是 “What a verynice day”。<br>要想在两个字符串之间增加空格，需要把空格插入一个字符串之中：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">txt1</span>=<span class="string">"What a very "</span>;</div><div class="line"><span class="attr">txt2</span>=<span class="string">"nice day"</span>;</div><div class="line"><span class="attr">txt3</span>=txt1+txt2;</div></pre></td></tr></table></figure></p>
+<p>或者把空格插入表达式中：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">txt1</span>=<span class="string">"What a very"</span>;</div><div class="line"><span class="attr">txt2</span>=<span class="string">"nice day"</span>;</div><div class="line"><span class="attr">txt3</span>=txt1+<span class="string">" "</span>+txt2;</div></pre></td></tr></table></figure></p>
+<p>在以上语句执行后，变量 txt3 包含的值是：<br><code>&quot;What a very nice day&quot;</code></p>
+<h5 id="对字符串和数字进行加法运算"><a href="#对字符串和数字进行加法运算" class="headerlink" title="对字符串和数字进行加法运算"></a>对字符串和数字进行加法运算</h5><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">x=<span class="number">5</span>+<span class="number">5</span><span class="comment">;</span></div><div class="line">document.write(x)<span class="comment">;</span></div><div class="line"></div><div class="line">x=<span class="string">"5"</span>+<span class="string">"5"</span><span class="comment">;</span></div><div class="line">document.write(x)<span class="comment">;</span></div><div class="line"></div><div class="line">x=<span class="number">5</span>+<span class="string">"5"</span><span class="comment">;</span></div><div class="line">document.write(x)<span class="comment">;</span></div><div class="line"></div><div class="line">x=<span class="string">"5"</span>+<span class="number">5</span><span class="comment">;</span></div><div class="line">document.write(x)<span class="comment">;</span></div></pre></td></tr></table></figure>
+<p>结果是<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="number">10</span></div><div class="line"><span class="number">55</span></div><div class="line"><span class="number">55</span></div><div class="line"><span class="number">55</span></div></pre></td></tr></table></figure></p>
+<p>规则是：<br>如果把数字与字符串相加，结果将成为字符串。</p>
+<h5 id="自增和自减"><a href="#自增和自减" class="headerlink" title="自增和自减"></a>自增和自减</h5><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mynum =<span class="number">10</span>;</div><div class="line">mynum++;<span class="comment">//mynum值为11</span></div><div class="line">munum--;<span class="comment">//mynum值再次变为10</span></div></pre></td></tr></table></figure>
+<h5 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h5><table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>小于或等于</td>
+</tr>
+<tr>
+<td>>=</td>
+<td>大于或等于</td>
+</tr>
+<tr>
+<td>==</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>不等于</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="number">2</span>;</div><div class="line"><span class="built_in">document</span>.write(a&lt;b);<span class="comment">//输出true</span></div><div class="line"><span class="built_in">document</span>.write(a&gt;=b);<span class="comment">//输出false</span></div><div class="line"><span class="built_in">document</span>.write(a!=b);<span class="comment">//输出true</span></div><div class="line"><span class="built_in">document</span>.write(a==b);<span class="comment">//输出false</span></div></pre></td></tr></table></figure>
+<h5 id="逻辑与操作符"><a href="#逻辑与操作符" class="headerlink" title="逻辑与操作符"></a>逻辑与操作符</h5><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">b&gt;a &amp;&amp; b&lt;<span class="built_in">c</span>;<span class="comment">//b大于a并且b小于c</span></div></pre></td></tr></table></figure>
+<p>只有&amp;&amp;两边同时为真，整个表达式才为真，先计算左边，如果为假，不再计算右边。即如果A为假，A &amp;&amp; B为假，不会再执行B; 反之，如果A为真，要由 B 的值来决定 A &amp;&amp; B 的值。</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A &amp;&amp; B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真(true)</td>
+<td>真(true)</td>
+<td>真(true)</td>
+</tr>
+<tr>
+<td>真(true)</td>
+<td>假(false)</td>
+<td>假(false)</td>
+</tr>
+<tr>
+<td>假(false)</td>
+<td>真(true)</td>
+<td>假(false)</td>
+</tr>
+<tr>
+<td>假(false)</td>
+<td>假(false)</td>
+<td>假(false)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="逻辑或操作符"><a href="#逻辑或操作符" class="headerlink" title="逻辑或操作符"></a>逻辑或操作符</h5><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">b&gt;<span class="keyword">a</span> || b&lt;c<span class="comment">;//b大于a或者b小于c</span></div></pre></td></tr></table></figure>
+<p>只有||两边有一个为真，整个表达式就为真，先计算左边，如果为假，不再计算右边。即如果A为真，A || B为真，不会再执行B; 反之，如果A为假，要由 B 的值来决定 A || B 的值。</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A \</th>
+<th>\</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真(true)</td>
+<td>真(true)</td>
+<td>真(true)</td>
+</tr>
+<tr>
+<td>真(true)</td>
+<td>假(false)</td>
+<td>真(true)</td>
+</tr>
+<tr>
+<td>假(false)</td>
+<td>真(true)</td>
+<td>真(true)</td>
+</tr>
+<tr>
+<td>假(false)</td>
+<td>假(false)</td>
+<td>假(false)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="逻辑非操作符"><a href="#逻辑非操作符" class="headerlink" title="逻辑非操作符"></a>逻辑非操作符</h5><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b=<span class="number">2</span>;</div><div class="line"><span class="built_in">c</span>=!(b&gt;a);<span class="comment">//c为true</span></div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>!A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真(true)</td>
+<td>假(false)</td>
+</tr>
+<tr>
+<td>假(false)</td>
+<td>真(true)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="操作符优先级"><a href="#操作符优先级" class="headerlink" title="操作符优先级"></a>操作符优先级</h5><ul>
+<li><p>除法乘法优先级高于加减法</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = <span class="number">1</span>;</div><div class="line">var b = <span class="number">2</span>;</div><div class="line">var c = a + <span class="number">20</span>*<span class="number">2</span> - b;<span class="comment">//c的值为39</span></div></pre></td></tr></table></figure>
+<p>要想改变运算顺序，要用括号来改变优先级</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = <span class="number">1</span>;</div><div class="line">var b = <span class="number">2</span>;</div><div class="line">var c = (a + <span class="number">20</span>)*(<span class="number">2</span> - b);<span class="comment">//c的值为0</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>操作符优先级由高到低：</p>
+<ul>
+<li>算数操作符-&gt;比较操作符-&gt;逻辑操作符-&gt;”=”赋值符</li>
+<li><p>同级运算从左到右，多层括号由里向外。</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var a</span> = 1;</div><div class="line"><span class="attribute">var b</span> = 2;</div><div class="line"><span class="attribute">var c</span> = a * 10&gt;30 || b &lt; a//c为false</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h3 id=&quot;变量命名规则&quot;&gt;&lt;a href=&quot;#变量命名规则&quot; class=&quot;headerlink&quot; title=&quot;变量命名规则&quot;&gt;&lt;/a&gt;变量命名规则&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;必须以字母、下划线或美元符号开头，后面可以跟字母、下划线、美元符号和数字&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;变量名区分大小写，如:A与a是两个不同变量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="慕课网学习笔记" scheme="http://huyanshan.com/tags/%E6%85%95%E8%AF%BE%E7%BD%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js变量表达式运算符</title>
+    <link href="http://huyanshan.com/2016/09/22/js%E5%8F%98%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>http://huyanshan.com/2016/09/22/js变量表达式运算符/</id>
+    <published>2016-09-22T08:04:35.000Z</published>
+    <updated>2016-09-22T08:07:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="变量命名规则"><a href="#变量命名规则" class="headerlink" title="变量命名规则"></a>变量命名规则</h3><ol>
+<li><p>必须以字母、下划线或美元符号开头，后面可以跟字母、下划线、美元符号和数字</p>
+</li>
+<li><p>变量名区分大小写，如:A与a是两个不同变量。</p>
+</li>
+<li><p>不允许使用JavaScript保留关键字做变量名：</p>
+<a id="more"></a></li>
+</ol>
+<ul>
+<li>abstract、arguments</li>
+<li>boolean、break、byte</li>
+<li>case、catch、char、class*、const、continue</li>
+<li>debugger、default、delete、do、double</li>
+<li>else、enum<em>、eval、export</em>、extends*</li>
+<li>false、final、finally、float、for、function</li>
+<li>goto</li>
+<li>if、implements、import*、in、instanceof、int、interface</li>
+<li>let、long</li>
+<li>native、new、null</li>
+<li>package、private、protected、public</li>
+<li>return</li>
+<li>short、static、super*、switch、synchronized</li>
+<li>this、throw、throws、transient、true、try、typeof</li>
+<li>var、void、volatile</li>
+<li>while、with</li>
+<li>yield </li>
+</ul>
+<ol>
+<li>不能用JavaScript 内置的对象、属性和方法的名称作为 Javascript 的变量或函数名：</li>
+</ol>
+<ul>
+<li>Array</li>
+<li>Date、eval</li>
+<li>function</li>
+<li>hasOwnProperty</li>
+<li>Infinity</li>
+<li>isFinite、isNaN、isPrototypeOf</li>
+<li>length</li>
+<li>Math</li>
+<li>NaN、name、Number</li>
+<li>Object</li>
+<li>prototype</li>
+<li>String</li>
+<li>toString</li>
+<li>undefined</li>
+<li>valueOf</li>
+</ul>
+<h3 id="变量赋值"><a href="#变量赋值" class="headerlink" title="变量赋值"></a>变量赋值</h3><p>使用<code>=</code>来赋值<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">123</span>;       <span class="comment">// 123是数值</span></div><div class="line"><span class="keyword">var</span> num2 = <span class="string">"123"</span>;    <span class="comment">//"一二三"是字符串,要用“”引起来</span></div><div class="line"><span class="keyword">var</span> num3=<span class="literal">true</span>;    <span class="comment">//布尔值true（真），false(假)</span></div></pre></td></tr></table></figure></p>
+<h3 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h3><p>表达式是指具有一定的值、用操作符把常数和变量连接起来的代数式。一个表达式可以包含常数或变量。<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> <span class="string">"this"</span>+<span class="string">"is"</span>+<span class="string">"js"</span></div><div class="line"><span class="number">2.</span> <span class="string">"this"</span> + str</div><div class="line"><span class="number">3.</span> num + <span class="number">2</span>*<span class="number">3</span></div><div class="line"><span class="number">4.</span> <span class="number">3</span>+<span class="number">2</span></div><div class="line"><span class="number">5.</span> <span class="number">1</span>&gt;<span class="number">2</span></div><div class="line"><span class="number">6.</span> num == <span class="number">1</span></div><div class="line"><span class="number">7.</span> num &lt; <span class="number">50</span></div></pre></td></tr></table></figure></p>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><p>运算符<code>=</code>用于赋值。<br>运算符<code>+</code>用于加值。</p>
+<h5 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h5><p>算术运算符用于执行变量与/或值之间的算术运算。<br>给定 y=5，下面的表格解释了这些算术运算符<br>| 运算符 | 描述 | 例子 | 结果 |<br>|——  |  —-|  —-|  —-|<br>|+       |  加  | x=y+2|   x=7|<br>|-       |  减  | x=y-2|   x=3|<br>|<em>|乘|x=y</em>2|x=10|<br>|/|除|x=y/2|x=2.5|<br>|%|求余数 (保留整数)|x=y%2|x=1|<br>|++|累加|x=++y|x=6|<br>|–|递减|x=–y|x=4|</p>
+<h5 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h5><p>赋值运算符用于给 JavaScript 变量赋值。<br>给定 x=10 和 y=5，下面的表格解释了赋值运算符：</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>例子</th>
+<th>等价于</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>x=y</td>
+<td></td>
+<td>x=5</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>x+=y</td>
+<td>x=x+y</td>
+<td>x=15</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>x-=y</td>
+<td>x=x-y</td>
+<td>x=5</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>x*=y</td>
+<td>x=x*y</td>
+<td>x=50</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>x/=y</td>
+<td>x=x/y</td>
+<td>x=2</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>x%=y</td>
+<td>x=x%y</td>
+<td>x=0</td>
+</tr>
+</tbody>
+</table>
+<h5 id="用于字符串的-运算符"><a href="#用于字符串的-运算符" class="headerlink" title="用于字符串的 + 运算符"></a>用于字符串的 + 运算符</h5><p><code>+</code> 运算符用于把文本值或字符串变量加起来（连接起来）。<br>如需把两个或多个字符串变量连接起来，请使用<code>+</code>运算符。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">txt1</span>=<span class="string">"What a very"</span>;</div><div class="line"><span class="attr">txt2</span>=<span class="string">"nice day"</span>;</div><div class="line"><span class="attr">txt3</span>=txt1+txt2;</div></pre></td></tr></table></figure></p>
+<p>在以上语句执行后，变量 txt3 包含的值是 “What a verynice day”。<br>要想在两个字符串之间增加空格，需要把空格插入一个字符串之中：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">txt1</span>=<span class="string">"What a very "</span>;</div><div class="line"><span class="attr">txt2</span>=<span class="string">"nice day"</span>;</div><div class="line"><span class="attr">txt3</span>=txt1+txt2;</div></pre></td></tr></table></figure></p>
+<p>或者把空格插入表达式中：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">txt1</span>=<span class="string">"What a very"</span>;</div><div class="line"><span class="attr">txt2</span>=<span class="string">"nice day"</span>;</div><div class="line"><span class="attr">txt3</span>=txt1+<span class="string">" "</span>+txt2;</div></pre></td></tr></table></figure></p>
+<p>在以上语句执行后，变量 txt3 包含的值是：<br><code>&quot;What a very nice day&quot;</code></p>
+<h5 id="对字符串和数字进行加法运算"><a href="#对字符串和数字进行加法运算" class="headerlink" title="对字符串和数字进行加法运算"></a>对字符串和数字进行加法运算</h5><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">x=<span class="number">5</span>+<span class="number">5</span><span class="comment">;</span></div><div class="line">document.write(x)<span class="comment">;</span></div><div class="line"></div><div class="line">x=<span class="string">"5"</span>+<span class="string">"5"</span><span class="comment">;</span></div><div class="line">document.write(x)<span class="comment">;</span></div><div class="line"></div><div class="line">x=<span class="number">5</span>+<span class="string">"5"</span><span class="comment">;</span></div><div class="line">document.write(x)<span class="comment">;</span></div><div class="line"></div><div class="line">x=<span class="string">"5"</span>+<span class="number">5</span><span class="comment">;</span></div><div class="line">document.write(x)<span class="comment">;</span></div></pre></td></tr></table></figure>
+<p>结果是<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="number">10</span></div><div class="line"><span class="number">55</span></div><div class="line"><span class="number">55</span></div><div class="line"><span class="number">55</span></div></pre></td></tr></table></figure></p>
+<p>规则是：<br>如果把数字与字符串相加，结果将成为字符串。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;变量命名规则&quot;&gt;&lt;a href=&quot;#变量命名规则&quot; class=&quot;headerlink&quot; title=&quot;变量命名规则&quot;&gt;&lt;/a&gt;变量命名规则&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;必须以字母、下划线或美元符号开头，后面可以跟字母、下划线、美元符号和数字&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;变量名区分大小写，如:A与a是两个不同变量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;不允许使用JavaScript保留关键字做变量名：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="慕课网学习笔记" scheme="http://huyanshan.com/tags/%E6%85%95%E8%AF%BE%E7%BD%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>DOM操作</title>

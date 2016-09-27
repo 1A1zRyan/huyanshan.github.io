@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>js变量和操作符 | 彦</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[TOC]
+变量命名规则
+必须以字母、下划线或美元符号开头，后面可以跟字母、下划线、美元符号和数字
+
+变量名区分大小写，如:A与a是两个不同变量。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js变量和操作符">
+<meta property="og:url" content="http://huyanshan.com/2016/09/27/js变量和操作符/index.html">
+<meta property="og:site_name" content="彦">
+<meta property="og:description" content="[TOC]
+变量命名规则
+必须以字母、下划线或美元符号开头，后面可以跟字母、下划线、美元符号和数字
+
+变量名区分大小写，如:A与a是两个不同变量。">
+<meta property="og:updated_time" content="2016-09-27T08:15:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js变量和操作符">
+<meta name="twitter:description" content="[TOC]
+变量命名规则
+必须以字母、下划线或美元符号开头，后面可以跟字母、下划线、美元符号和数字
+
+变量名区分大小写，如:A与a是两个不同变量。">
+  
+    <link rel="alternative" href="/atom.xml" title="彦" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favsicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/ryan.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Yanshan</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">折腾的人生</p>
+		
+		
+		<form><input type="text" class="search" placeholder=" Search..."></form>
+				
+
+
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/tags/">标签云</a></li>
+				        
+							<li><a href="/about/">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:yanshan_huhu@qq.com" title="Email"></a></li>
+					        
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/u/5400534341" title="新浪微博"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/huyanshan" title="GitHub"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/huyanshan" title="知乎"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">一个热爱技术的青年</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Yanshan</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/ryan.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">Yanshan</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">折腾的人生</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/tags/">标签云</a></li>
+		        
+					<li><a href="/about/">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:yanshan_huhu@qq.com" title="Email"></a></li>
+					        
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/u/5400534341" title="新浪微博"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/huyanshan" title="GitHub"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/huyanshan" title="知乎"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-js变量和操作符" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/27/js变量和操作符/" class="article-date">
+  	<time datetime="2016-09-27T08:12:54.000Z" itemprop="datePublished">2016-09-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js变量和操作符
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/前端/">前端</a>
+	</div>
+
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/慕课网学习笔记/">慕课网学习笔记</a></li></ul>
+	</div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p>[TOC]</p>
+<h3 id="变量命名规则"><a href="#变量命名规则" class="headerlink" title="变量命名规则"></a>变量命名规则</h3><ol>
+<li><p>必须以字母、下划线或美元符号开头，后面可以跟字母、下划线、美元符号和数字</p>
+</li>
+<li><p>变量名区分大小写，如:A与a是两个不同变量。</p>
+</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li>不允许使用JavaScript保留关键字做变量名：</li>
+</ol>
+<ul>
+<li>abstract、arguments</li>
+<li>boolean、break、byte</li>
+<li>case、catch、char、class*、const、continue</li>
+<li>debugger、default、delete、do、double</li>
+<li>else、enum<em>、eval、export</em>、extends*</li>
+<li>false、final、finally、float、for、function</li>
+<li>goto</li>
+<li>if、implements、import*、in、instanceof、int、interface</li>
+<li>let、long</li>
+<li>native、new、null</li>
+<li>package、private、protected、public</li>
+<li>return</li>
+<li>short、static、super*、switch、synchronized</li>
+<li>this、throw、throws、transient、true、try、typeof</li>
+<li>var、void、volatile</li>
+<li>while、with</li>
+<li>yield </li>
+</ul>
+<ol>
+<li>不能用JavaScript 内置的对象、属性和方法的名称作为 Javascript 的变量或函数名：</li>
+</ol>
+<ul>
+<li>Array</li>
+<li>Date、eval</li>
+<li>function</li>
+<li>hasOwnProperty</li>
+<li>Infinity</li>
+<li>isFinite、isNaN、isPrototypeOf</li>
+<li>length</li>
+<li>Math</li>
+<li>NaN、name、Number</li>
+<li>Object</li>
+<li>prototype</li>
+<li>String</li>
+<li>toString</li>
+<li>undefined</li>
+<li>valueOf</li>
+</ul>
+<h3 id="变量赋值"><a href="#变量赋值" class="headerlink" title="变量赋值"></a>变量赋值</h3><p>使用<code>=</code>来赋值<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">123</span>;       <span class="comment">// 123是数值</span></div><div class="line"><span class="keyword">var</span> num2 = <span class="string">"123"</span>;    <span class="comment">//"一二三"是字符串,要用“”引起来</span></div><div class="line"><span class="keyword">var</span> num3=<span class="literal">true</span>;    <span class="comment">//布尔值true（真），false(假)</span></div></pre></td></tr></table></figure></p>
+<h3 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h3><p>表达式是指具有一定的值、用操作符把常数和变量连接起来的代数式。一个表达式可以包含常数或变量。<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> <span class="string">"this"</span>+<span class="string">"is"</span>+<span class="string">"js"</span></div><div class="line"><span class="number">2.</span> <span class="string">"this"</span> + str</div><div class="line"><span class="number">3.</span> num + <span class="number">2</span>*<span class="number">3</span></div><div class="line"><span class="number">4.</span> <span class="number">3</span>+<span class="number">2</span></div><div class="line"><span class="number">5.</span> <span class="number">1</span>&gt;<span class="number">2</span></div><div class="line"><span class="number">6.</span> num == <span class="number">1</span></div><div class="line"><span class="number">7.</span> num &lt; <span class="number">50</span></div></pre></td></tr></table></figure></p>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><p>运算符<code>=</code>用于赋值。<br>运算符<code>+</code>用于加值。</p>
+<h5 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h5><p>算术运算符用于执行变量与/或值之间的算术运算。<br>给定 y=5，下面的表格解释了这些算术运算符<br>| 运算符 | 描述 | 例子 | 结果 |<br>|——  |  —-|  —-|  —-|<br>|+       |  加  | x=y+2|   x=7|<br>|-       |  减  | x=y-2|   x=3|<br>|<em>|乘|x=y</em>2|x=10|<br>|/|除|x=y/2|x=2.5|<br>|%|求余数 (保留整数)|x=y%2|x=1|<br>|++|累加|x=++y|x=6|<br>|–|递减|x=–y|x=4|</p>
+<h5 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h5><p>赋值运算符用于给 JavaScript 变量赋值。<br>给定 x=10 和 y=5，下面的表格解释了赋值运算符：</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>例子</th>
+<th>等价于</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>x=y</td>
+<td></td>
+<td>x=5</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>x+=y</td>
+<td>x=x+y</td>
+<td>x=15</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>x-=y</td>
+<td>x=x-y</td>
+<td>x=5</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>x*=y</td>
+<td>x=x*y</td>
+<td>x=50</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>x/=y</td>
+<td>x=x/y</td>
+<td>x=2</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>x%=y</td>
+<td>x=x%y</td>
+<td>x=0</td>
+</tr>
+</tbody>
+</table>
+<h5 id="用于字符串的-运算符"><a href="#用于字符串的-运算符" class="headerlink" title="用于字符串的 + 运算符"></a>用于字符串的 + 运算符</h5><p><code>+</code> 运算符用于把文本值或字符串变量加起来（连接起来）。<br>如需把两个或多个字符串变量连接起来，请使用<code>+</code>运算符。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">txt1</span>=<span class="string">"What a very"</span>;</div><div class="line"><span class="attr">txt2</span>=<span class="string">"nice day"</span>;</div><div class="line"><span class="attr">txt3</span>=txt1+txt2;</div></pre></td></tr></table></figure></p>
+<p>在以上语句执行后，变量 txt3 包含的值是 “What a verynice day”。<br>要想在两个字符串之间增加空格，需要把空格插入一个字符串之中：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">txt1</span>=<span class="string">"What a very "</span>;</div><div class="line"><span class="attr">txt2</span>=<span class="string">"nice day"</span>;</div><div class="line"><span class="attr">txt3</span>=txt1+txt2;</div></pre></td></tr></table></figure></p>
+<p>或者把空格插入表达式中：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">txt1</span>=<span class="string">"What a very"</span>;</div><div class="line"><span class="attr">txt2</span>=<span class="string">"nice day"</span>;</div><div class="line"><span class="attr">txt3</span>=txt1+<span class="string">" "</span>+txt2;</div></pre></td></tr></table></figure></p>
+<p>在以上语句执行后，变量 txt3 包含的值是：<br><code>&quot;What a very nice day&quot;</code></p>
+<h5 id="对字符串和数字进行加法运算"><a href="#对字符串和数字进行加法运算" class="headerlink" title="对字符串和数字进行加法运算"></a>对字符串和数字进行加法运算</h5><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">x=<span class="number">5</span>+<span class="number">5</span><span class="comment">;</span></div><div class="line">document.write(x)<span class="comment">;</span></div><div class="line"></div><div class="line">x=<span class="string">"5"</span>+<span class="string">"5"</span><span class="comment">;</span></div><div class="line">document.write(x)<span class="comment">;</span></div><div class="line"></div><div class="line">x=<span class="number">5</span>+<span class="string">"5"</span><span class="comment">;</span></div><div class="line">document.write(x)<span class="comment">;</span></div><div class="line"></div><div class="line">x=<span class="string">"5"</span>+<span class="number">5</span><span class="comment">;</span></div><div class="line">document.write(x)<span class="comment">;</span></div></pre></td></tr></table></figure>
+<p>结果是<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="number">10</span></div><div class="line"><span class="number">55</span></div><div class="line"><span class="number">55</span></div><div class="line"><span class="number">55</span></div></pre></td></tr></table></figure></p>
+<p>规则是：<br>如果把数字与字符串相加，结果将成为字符串。</p>
+<h5 id="自增和自减"><a href="#自增和自减" class="headerlink" title="自增和自减"></a>自增和自减</h5><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mynum =<span class="number">10</span>;</div><div class="line">mynum++;<span class="comment">//mynum值为11</span></div><div class="line">munum--;<span class="comment">//mynum值再次变为10</span></div></pre></td></tr></table></figure>
+<h5 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h5><table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>小于或等于</td>
+</tr>
+<tr>
+<td>>=</td>
+<td>大于或等于</td>
+</tr>
+<tr>
+<td>==</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>不等于</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="number">2</span>;</div><div class="line"><span class="built_in">document</span>.write(a&lt;b);<span class="comment">//输出true</span></div><div class="line"><span class="built_in">document</span>.write(a&gt;=b);<span class="comment">//输出false</span></div><div class="line"><span class="built_in">document</span>.write(a!=b);<span class="comment">//输出true</span></div><div class="line"><span class="built_in">document</span>.write(a==b);<span class="comment">//输出false</span></div></pre></td></tr></table></figure>
+<h5 id="逻辑与操作符"><a href="#逻辑与操作符" class="headerlink" title="逻辑与操作符"></a>逻辑与操作符</h5><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">b&gt;a &amp;&amp; b&lt;<span class="built_in">c</span>;<span class="comment">//b大于a并且b小于c</span></div></pre></td></tr></table></figure>
+<p>只有&amp;&amp;两边同时为真，整个表达式才为真，先计算左边，如果为假，不再计算右边。即如果A为假，A &amp;&amp; B为假，不会再执行B; 反之，如果A为真，要由 B 的值来决定 A &amp;&amp; B 的值。</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A &amp;&amp; B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真(true)</td>
+<td>真(true)</td>
+<td>真(true)</td>
+</tr>
+<tr>
+<td>真(true)</td>
+<td>假(false)</td>
+<td>假(false)</td>
+</tr>
+<tr>
+<td>假(false)</td>
+<td>真(true)</td>
+<td>假(false)</td>
+</tr>
+<tr>
+<td>假(false)</td>
+<td>假(false)</td>
+<td>假(false)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="逻辑或操作符"><a href="#逻辑或操作符" class="headerlink" title="逻辑或操作符"></a>逻辑或操作符</h5><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">b&gt;<span class="keyword">a</span> || b&lt;c<span class="comment">;//b大于a或者b小于c</span></div></pre></td></tr></table></figure>
+<p>只有||两边有一个为真，整个表达式就为真，先计算左边，如果为假，不再计算右边。即如果A为真，A || B为真，不会再执行B; 反之，如果A为假，要由 B 的值来决定 A || B 的值。</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A \</th>
+<th>\</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真(true)</td>
+<td>真(true)</td>
+<td>真(true)</td>
+</tr>
+<tr>
+<td>真(true)</td>
+<td>假(false)</td>
+<td>真(true)</td>
+</tr>
+<tr>
+<td>假(false)</td>
+<td>真(true)</td>
+<td>真(true)</td>
+</tr>
+<tr>
+<td>假(false)</td>
+<td>假(false)</td>
+<td>假(false)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="逻辑非操作符"><a href="#逻辑非操作符" class="headerlink" title="逻辑非操作符"></a>逻辑非操作符</h5><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b=<span class="number">2</span>;</div><div class="line"><span class="built_in">c</span>=!(b&gt;a);<span class="comment">//c为true</span></div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>!A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真(true)</td>
+<td>假(false)</td>
+</tr>
+<tr>
+<td>假(false)</td>
+<td>真(true)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="操作符优先级"><a href="#操作符优先级" class="headerlink" title="操作符优先级"></a>操作符优先级</h5><ul>
+<li><p>除法乘法优先级高于加减法</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = <span class="number">1</span>;</div><div class="line">var b = <span class="number">2</span>;</div><div class="line">var c = a + <span class="number">20</span>*<span class="number">2</span> - b;<span class="comment">//c的值为39</span></div></pre></td></tr></table></figure>
+<p>要想改变运算顺序，要用括号来改变优先级</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = <span class="number">1</span>;</div><div class="line">var b = <span class="number">2</span>;</div><div class="line">var c = (a + <span class="number">20</span>)*(<span class="number">2</span> - b);<span class="comment">//c的值为0</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>操作符优先级由高到低：</p>
+<ul>
+<li>算数操作符-&gt;比较操作符-&gt;逻辑操作符-&gt;”=”赋值符</li>
+<li><p>同级运算从左到右，多层括号由里向外。</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var a</span> = 1;</div><div class="line"><span class="attribute">var b</span> = 2;</div><div class="line"><span class="attribute">var c</span> = a * 10&gt;30 || b &lt; a//c为false</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="copyright">
+  <p><span>本文标题:</span><a href="/2016/09/27/js变量和操作符/">js变量和操作符</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Yanshan 的个人博客">Yanshan</a></p>
+  <p><span>发布时间:</span>2016年09月27日 - 16时12分</p>
+  <p><span>最后更新:</span>2016年09月27日 - 16时15分</p>
+  <p>
+    <span>原始链接:</span><a href="/2016/09/27/js变量和操作符/" title="js变量和操作符">http://huyanshan.com/2016/09/27/js变量和操作符/</a>
+    <span class="btn" data-clipboard-text="原文: http://huyanshan.com/2016/09/27/js变量和操作符/　　作者: Yanshan" title="点击复制文章链接">
+        <i class="fa fa-clipboard"></i>
+    </span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
+  <script src="/js/clipboard.min.js"></script>
+  <script> var clipboard = new Clipboard('.btn'); </script>
+</div>
+<style type="text/css">
+  .copyright p .btn {
+    margin-left: 1em;
+  }
+  .copyright:hover p .btn::after {
+    content: "复制"
+  }
+  .copyright p .btn:hover {
+      color: gray;
+      cursor: pointer;
+    };
+</style>
+
+
+
+<nav id="article-nav">
+  
+  
+    <div id="article-nav-older" class="article-nav-title">
+      <a href="/2016/09/22/js变量表达式运算符/">
+        js变量表达式运算符
+      </a>
+    </div>
+  
+</nav>
+
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+<strong class="toc-title">文章目录</strong>
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#变量命名规则"><span class="toc-number">1.</span> <span class="toc-text">变量命名规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量赋值"><span class="toc-number">2.</span> <span class="toc-text">变量赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表达式"><span class="toc-number">3.</span> <span class="toc-text">表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作符"><span class="toc-number">4.</span> <span class="toc-text">操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#算数运算符"><span class="toc-number">4.0.1.</span> <span class="toc-text">算数运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#赋值运算符"><span class="toc-number">4.0.2.</span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#用于字符串的-运算符"><span class="toc-number">4.0.3.</span> <span class="toc-text">用于字符串的 + 运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#对字符串和数字进行加法运算"><span class="toc-number">4.0.4.</span> <span class="toc-text">对字符串和数字进行加法运算</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#自增和自减"><span class="toc-number">4.0.5.</span> <span class="toc-text">自增和自减</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#比较运算符"><span class="toc-number">4.0.6.</span> <span class="toc-text">比较运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#逻辑与操作符"><span class="toc-number">4.0.7.</span> <span class="toc-text">逻辑与操作符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#逻辑或操作符"><span class="toc-number">4.0.8.</span> <span class="toc-text">逻辑或操作符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#逻辑非操作符"><span class="toc-number">4.0.9.</span> <span class="toc-text">逻辑非操作符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#操作符优先级"><span class="toc-number">4.0.10.</span> <span class="toc-text">操作符优先级</span></a></li></ol></li></ol></li></ol>
+</div>
+<style type="text/css">
+  .left-col .switch-btn {
+    display: none;
+  }
+  .left-col .switch-area {
+    display: none;
+  }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+  var toc_button= document.getElementById("tocButton");
+  var toc_div= document.getElementById("toc");
+  /* Show or hide toc when click on tocButton.
+  通过点击设置的按钮显示或者隐藏文章目录.*/
+  toc_button.onclick=function(){
+  if(toc_div.style.display=="none"){
+  toc_div.style.display="block";
+  toc_button.value="隐藏目录";
+  document.getElementById("switch-btn").style.display="none";
+  document.getElementById("switch-area").style.display="none";
+  }
+  else{
+  toc_div.style.display="none";
+  toc_button.value="显示目录";
+  document.getElementById("switch-btn").style.display="block";
+  document.getElementById("switch-area").style.display="block";
+  }
+  }
+</script>
+
+
+<div class="share">
+	<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+	<a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+	</div>
+	<script>
+	window._bd_share_config={
+		"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/09/27/js变量和操作符/" data-title="js变量和操作符" data-url="http://huyanshan.com/2016/09/27/js变量和操作符/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"huyanshan"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#ds-thread" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+  
+  
+    <div  class="post-nav-button">
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2016/09/22/js变量表达式运算符/" title="下一篇: js变量表达式运算符">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+    
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+        
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 Yanshan
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+  <style>
+    body {
+      background: lightgray;
+    }
+    #container .left-col {
+      background: white;
+    }
+    .article-inner {
+      background: white;
+    }
+    .post-nav-button {
+      background: #ececec;
+    }
+    #header .header-nav .social #GitHub {
+      background-color: #bfd3ec;
+    }
+  </style>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
