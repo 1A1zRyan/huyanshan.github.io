@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>javascript数组 | 彦</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一维数组创建数组12var array = new Array();//创建新数组，该数组为空，没有值，输出会显示undefinedvar array = new Array(10);//创建数组同时指定长度，但是实际上数组是变长的，即使指定10个长度，也可以把元素存在规定长度以外。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript数组">
+<meta property="og:url" content="http://huyanshan.com/2016/10/10/javascript数组/index.html">
+<meta property="og:site_name" content="彦">
+<meta property="og:description" content="一维数组创建数组12var array = new Array();//创建新数组，该数组为空，没有值，输出会显示undefinedvar array = new Array(10);//创建数组同时指定长度，但是实际上数组是变长的，即使指定10个长度，也可以把元素存在规定长度以外。">
+<meta property="og:updated_time" content="2016-10-10T07:21:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript数组">
+<meta name="twitter:description" content="一维数组创建数组12var array = new Array();//创建新数组，该数组为空，没有值，输出会显示undefinedvar array = new Array(10);//创建数组同时指定长度，但是实际上数组是变长的，即使指定10个长度，也可以把元素存在规定长度以外。">
+  
+    <link rel="alternative" href="/atom.xml" title="彦" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favsicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/ryan.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Yanshan</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">折腾的人生</p>
+		
+		
+		<form><input type="text" class="search" placeholder=" Search..."></form>
+				
+
+
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/tags/">标签云</a></li>
+				        
+							<li><a href="/about/">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:yanshan_huhu@qq.com" title="Email"></a></li>
+					        
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/u/5400534341" title="新浪微博"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/huyanshan" title="GitHub"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/huyanshan" title="知乎"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">一个热爱技术的青年</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Yanshan</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/ryan.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">Yanshan</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">折腾的人生</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/tags/">标签云</a></li>
+		        
+					<li><a href="/about/">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:yanshan_huhu@qq.com" title="Email"></a></li>
+					        
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/u/5400534341" title="新浪微博"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/huyanshan" title="GitHub"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/huyanshan" title="知乎"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-javascript数组" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/10/javascript数组/" class="article-date">
+  	<time datetime="2016-10-10T07:20:06.000Z" itemprop="datePublished">2016-10-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javascript数组
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/前端/">前端</a>
+	</div>
+
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/慕课网学习笔记/">慕课网学习笔记</a></li></ul>
+	</div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <h4 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h4><h5 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h5><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var<span class="built_in"> array </span>=<span class="built_in"> new </span>Array();//创建新数组，该数组为空，没有值，输出会显示undefined</div><div class="line">var<span class="built_in"> array </span>=<span class="built_in"> new </span>Array(10);//创建数组同时指定长度，但是实际上数组是变长的，即使指定10个长度，也可以把元素存在规定长度以外。</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h5 id="数组赋值"><a href="#数组赋值" class="headerlink" title="数组赋值"></a>数组赋值</h5><p>数组存储的数据可以是任何类型<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var<span class="built_in"> array </span>=<span class="built_in"> new </span>Array();</div><div class="line">第一种：<span class="built_in"></span></div><div class="line">array = <span class="string">"this is a test"</span>;</div><div class="line">第二种：</div><div class="line">array[0] = 1;</div><div class="line">array[1] = 2;</div><div class="line">第三种：</div><div class="line">var<span class="built_in"> array </span>=<span class="built_in"> new </span>Array(1,2,3,4,5);//创建的同时赋值</div><div class="line">第四种：</div><div class="line">var<span class="built_in"> array </span>= [1,2,3,4,5];//直接输入一个数组(<span class="string">"字面量数组"</span>)</div></pre></td></tr></table></figure></p>
+<h5 id="向数组新增元素"><a href="#向数组新增元素" class="headerlink" title="向数组新增元素"></a>向数组新增元素</h5><p>直接使用下一个未用的索引<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var<span class="built_in"> array </span>=<span class="built_in"> new </span>Array(3);</div><div class="line">array[0] = 1;</div><div class="line">array[1] = 2;//再添加一个元素</div></pre></td></tr></table></figure></p>
+<h5 id="使用数组中元素"><a href="#使用数组中元素" class="headerlink" title="使用数组中元素"></a>使用数组中元素</h5><p>引用数组变量并提供索引</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr=new Array()<span class="comment">;</span></div><div class="line">arr[<span class="number">0</span>]=<span class="string">"小红"</span><span class="comment">;</span></div><div class="line">arr[<span class="number">1</span>]=<span class="string">"小明"</span><span class="comment">;</span></div><div class="line">arr[<span class="number">2</span>]=<span class="string">"小亮"</span><span class="comment">;</span></div><div class="line">arr[<span class="number">3</span>]=<span class="string">"小川"</span><span class="comment">;</span></div><div class="line">document.write(<span class="string">"第二人的姓名是:"</span>+ myarr[<span class="number">1</span>] )<span class="comment">;</span></div></pre></td></tr></table></figure>
+<h5 id="获取数组长度"><a href="#获取数组长度" class="headerlink" title="获取数组长度"></a>获取数组长度</h5><p>使用length属性，返回数组长度。因为数组的索引总是由0开始，所以一个数组的索引的上下限分别是：0 和 length-1<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var<span class="built_in"> array </span>= [1,2,3,4,5,6,7];</div><div class="line">document.write(array.length); //获取数组长度，显示7</div></pre></td></tr></table></figure></p>
+<p>JavaScript中，数组的长度是可变的：</p>
+<ul>
+<li><p>重新指定数组长度</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">array</span>.length = <span class="number">10</span>;<span class="comment">//增大数组长度</span></div><div class="line">document.<span class="built_in">write</span>(<span class="keyword">array</span>.length); <span class="comment">//获取数组长度，显示10</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>增加数据元素，长度自动增加</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]; <span class="comment">// 包含7个数值的数组</span></div><div class="line">document.write(arr.length); <span class="comment">//显示数组的长度7</span></div><div class="line">arr[<span class="number">10</span>] = <span class="number">10</span>;  <span class="comment">//增加元素，使用索引为10,赋值为34</span></div><div class="line">document.write(arr.length); <span class="comment">//显示数组的长度11</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h4><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">一维数组表示 array<span class="selector-attr">[]</span>;</div><div class="line">二维数组表示 array<span class="selector-attr">[]</span><span class="selector-attr">[]</span>;</div></pre></td></tr></table></figure>
+<p>二维数组的两个维度的索引值也是从0开始，两个维度的最后一个索引值为长度-1。</p>
+<h5 id="定义二维数组"><a href="#定义二维数组" class="headerlink" title="定义二维数组"></a>定义二维数组</h5><p>方法一：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> <span class="keyword">array</span>=<span class="keyword">new</span> <span class="keyword">Array</span>();  <span class="comment">//先声明一维 </span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;   <span class="comment">//一维长度为2</span></div><div class="line">   <span class="keyword">array</span>[i]=<span class="keyword">new</span> <span class="keyword">Array</span>();  <span class="comment">//再声明二维 </span></div><div class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;<span class="number">3</span>;j++)&#123;   <span class="comment">//二维长度为3</span></div><div class="line">   <span class="keyword">array</span>[i][j]=i+j;   <span class="comment">// 赋值，每个数组元素的值为i+j</span></div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>方法二：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var Myarr = [[<span class="number">0</span> , <span class="number">1</span> , <span class="number">2</span> ],[<span class="number">1</span> , <span class="number">2</span> , <span class="number">3</span>]]</div></pre></td></tr></table></figure></p>
+<p>赋值：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">myarr[<span class="string">0</span>][<span class="symbol">1</span>]=5; //将5的值传入到数组中，覆盖原有值。</div><div class="line">说明: myarr[<span class="string">0</span>][<span class="symbol">1</span>] ,0 表示表的行，1表示表的列。</div></pre></td></tr></table></figure></p>
+<h4 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h4><p>做慕课网的编程练习时，发现一个有趣的事情。<br>如下代码<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//创建数组</span></div><div class="line">    <span class="keyword">var</span> <span class="keyword">array</span> = [<span class="string">'*'</span>,<span class="string">'##'</span>,<span class="string">"***"</span>,<span class="string">"&amp;&amp;"</span>,<span class="string">"****"</span>,<span class="string">"##*"</span>];</div><div class="line">    <span class="keyword">array</span>[<span class="number">7</span>] = <span class="string">"**"</span>;</div><div class="line">    <span class="keyword">var</span> tmp = <span class="keyword">new</span> <span class="keyword">Array</span>();</div><div class="line"> <span class="comment">//显示数组长度</span></div><div class="line">    document.write(<span class="keyword">array</span>.length);</div><div class="line">    <span class="keyword">var</span> j = <span class="number">0</span>;</div><div class="line"> <span class="comment">//将数组内容输出，完成达到的效果。</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">array</span>[i].indexOf(<span class="string">'*'</span>) != <span class="number">-1</span>)&#123;</div><div class="line">            tmp[j] = <span class="keyword">array</span>[i];</div><div class="line">            j++;</div><div class="line">        &#125;</div><div class="line">    &#125; </div><div class="line">    tmp.sort();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;tmp.length;i++)&#123;</div><div class="line">        document.write(tmp[i]+<span class="string">"&lt;br/&gt;"</span>);</div><div class="line">        </div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>这样是打印不出tmp数组结果的，一直没想通，后来试着改成这样<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//创建数组</span></div><div class="line">    <span class="keyword">var</span> <span class="keyword">array</span> = [<span class="string">'*'</span>,<span class="string">'##'</span>,<span class="string">"***"</span>,<span class="string">"&amp;&amp;"</span>,<span class="string">"****"</span>,<span class="string">"##*"</span>];</div><div class="line">    <span class="keyword">array</span>[<span class="number">6</span>] = <span class="string">"**"</span>;</div><div class="line">    <span class="keyword">var</span> tmp = <span class="keyword">new</span> <span class="keyword">Array</span>();</div><div class="line"> <span class="comment">//显示数组长度</span></div><div class="line">    document.write(<span class="keyword">array</span>.length);</div><div class="line">    <span class="keyword">var</span> j = <span class="number">0</span>;</div><div class="line"> <span class="comment">//将数组内容输出，完成达到的效果。</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">array</span>[i].indexOf(<span class="string">'*'</span>) != <span class="number">-1</span>)&#123;</div><div class="line">            tmp[j] = <span class="keyword">array</span>[i];</div><div class="line">            j++;</div><div class="line">        &#125;</div><div class="line">    &#125; </div><div class="line">    tmp.sort();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;tmp.length;i++)&#123;</div><div class="line">        document.write(tmp[i]+<span class="string">"&lt;br/&gt;"</span>);</div><div class="line">        </div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>发现有结果了，数了数，发现原来的代码中array[6]并没有被赋值，在原来的代码中加入了一句打印的代码，发现array[6]是undefined<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//创建数组</span></div><div class="line">    <span class="keyword">var</span> <span class="keyword">array</span> = [<span class="string">'*'</span>,<span class="string">'##'</span>,<span class="string">"***"</span>,<span class="string">"&amp;&amp;"</span>,<span class="string">"****"</span>,<span class="string">"##*"</span>];</div><div class="line">    <span class="keyword">array</span>[<span class="number">7</span>] = <span class="string">"**"</span>;</div><div class="line">    document.write(<span class="keyword">array</span>[<span class="number">6</span>]+<span class="string">"&lt;br/&gt;"</span>);<span class="comment">//打印结果是undefined</span></div><div class="line">    <span class="keyword">var</span> tmp = <span class="keyword">new</span> <span class="keyword">Array</span>();</div><div class="line"> <span class="comment">//显示数组长度</span></div><div class="line">    document.write(<span class="keyword">array</span>.length);</div><div class="line">    <span class="keyword">var</span> j = <span class="number">0</span>;</div><div class="line"> <span class="comment">//将数组内容输出，完成达到的效果。</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">array</span>[i].indexOf(<span class="string">'*'</span>) != <span class="number">-1</span>)&#123;</div><div class="line">            tmp[j] = <span class="keyword">array</span>[i];</div><div class="line">            document.write(<span class="string">"&lt;br/&gt;"</span>+<span class="string">"i:"</span>+i+<span class="string">"j:"</span>+j+tmp[j]+<span class="string">"&lt;br/&gt;"</span>);</div><div class="line">            j++;</div><div class="line">        &#125;</div><div class="line">    &#125; </div><div class="line">    tmp.sort();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;tmp.length;i++)&#123;</div><div class="line">        document.write(tmp[i]+<span class="string">"&lt;br/&gt;"</span>);</div><div class="line">        </div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>其中<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document<span class="selector-class">.write</span>(<span class="string">"&lt;br/&gt;"</span>+<span class="string">"i:"</span>+i+<span class="string">"j:"</span>+j+tmp[j]+<span class="string">"&lt;br/&gt;"</span>);</div></pre></td></tr></table></figure></p>
+<p>的打印结果是<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">i</span><span class="selector-pseudo">:0j</span><span class="selector-pseudo">:0</span>*</div><div class="line"></div><div class="line"><span class="selector-tag">i</span><span class="selector-pseudo">:2j</span><span class="selector-pseudo">:1</span>***</div><div class="line"></div><div class="line"><span class="selector-tag">i</span><span class="selector-pseudo">:4j</span><span class="selector-pseudo">:2</span>****</div><div class="line"></div><div class="line"><span class="selector-tag">i</span><span class="selector-pseudo">:5j</span><span class="selector-pseudo">:3</span>##*</div></pre></td></tr></table></figure></p>
+<p>i是取不到6以后的，所以其实虽然数组的长度是8，但是如果中间有未赋值的元素，循环就在未赋值元素这里断掉了。</p>
+
+      
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="copyright">
+  <p><span>本文标题:</span><a href="/2016/10/10/javascript数组/">javascript数组</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Yanshan 的个人博客">Yanshan</a></p>
+  <p><span>发布时间:</span>2016年10月10日 - 15时20分</p>
+  <p><span>最后更新:</span>2016年10月10日 - 15时21分</p>
+  <p>
+    <span>原始链接:</span><a href="/2016/10/10/javascript数组/" title="javascript数组">http://huyanshan.com/2016/10/10/javascript数组/</a>
+    <span class="btn" data-clipboard-text="原文: http://huyanshan.com/2016/10/10/javascript数组/　　作者: Yanshan" title="点击复制文章链接">
+        <i class="fa fa-clipboard"></i>
+    </span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
+  <script src="/js/clipboard.min.js"></script>
+  <script> var clipboard = new Clipboard('.btn'); </script>
+</div>
+<style type="text/css">
+  .copyright p .btn {
+    margin-left: 1em;
+  }
+  .copyright:hover p .btn::after {
+    content: "复制"
+  }
+  .copyright p .btn:hover {
+      color: gray;
+      cursor: pointer;
+    };
+</style>
+
+
+
+<nav id="article-nav">
+  
+  
+    <div id="article-nav-older" class="article-nav-title">
+      <a href="/2016/09/27/js变量和操作符/">
+        js变量和操作符
+      </a>
+    </div>
+  
+</nav>
+
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+<strong class="toc-title">文章目录</strong>
+<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#一维数组"><span class="toc-number">1.</span> <span class="toc-text">一维数组</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#创建数组"><span class="toc-number">1.1.</span> <span class="toc-text">创建数组</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#数组赋值"><span class="toc-number">1.2.</span> <span class="toc-text">数组赋值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#向数组新增元素"><span class="toc-number">1.3.</span> <span class="toc-text">向数组新增元素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#使用数组中元素"><span class="toc-number">1.4.</span> <span class="toc-text">使用数组中元素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#获取数组长度"><span class="toc-number">1.5.</span> <span class="toc-text">获取数组长度</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二维数组"><span class="toc-number">2.</span> <span class="toc-text">二维数组</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#定义二维数组"><span class="toc-number">2.1.</span> <span class="toc-text">定义二维数组</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编程练习"><span class="toc-number">3.</span> <span class="toc-text">编程练习</span></a></li></ol>
+</div>
+<style type="text/css">
+  .left-col .switch-btn {
+    display: none;
+  }
+  .left-col .switch-area {
+    display: none;
+  }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+  var toc_button= document.getElementById("tocButton");
+  var toc_div= document.getElementById("toc");
+  /* Show or hide toc when click on tocButton.
+  通过点击设置的按钮显示或者隐藏文章目录.*/
+  toc_button.onclick=function(){
+  if(toc_div.style.display=="none"){
+  toc_div.style.display="block";
+  toc_button.value="隐藏目录";
+  document.getElementById("switch-btn").style.display="none";
+  document.getElementById("switch-area").style.display="none";
+  }
+  else{
+  toc_div.style.display="none";
+  toc_button.value="显示目录";
+  document.getElementById("switch-btn").style.display="block";
+  document.getElementById("switch-area").style.display="block";
+  }
+  }
+</script>
+
+
+<div class="share">
+	<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+	<a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+	</div>
+	<script>
+	window._bd_share_config={
+		"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/10/10/javascript数组/" data-title="javascript数组" data-url="http://huyanshan.com/2016/10/10/javascript数组/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"huyanshan"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#ds-thread" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+  
+  
+    <div  class="post-nav-button">
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2016/09/27/js变量和操作符/" title="下一篇: js变量和操作符">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+    
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+        
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 Yanshan
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+  <style>
+    body {
+      background: lightgray;
+    }
+    #container .left-col {
+      background: white;
+    }
+    .article-inner {
+      background: white;
+    }
+    .post-nav-button {
+      background: #ececec;
+    }
+    #header .header-nav .social #GitHub {
+      background-color: #bfd3ec;
+    }
+  </style>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
