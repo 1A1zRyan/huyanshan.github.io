@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://huyanshan.com/"/>
-  <updated>2016-10-10T07:21:39.000Z</updated>
+  <updated>2016-10-12T06:32:26.000Z</updated>
   <id>http://huyanshan.com/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>逻辑运算</title>
+    <link href="http://huyanshan.com/2016/10/12/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/"/>
+    <id>http://huyanshan.com/2016/10/12/逻辑运算/</id>
+    <published>2016-10-12T06:30:47.000Z</published>
+    <updated>2016-10-12T06:32:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h4><h5 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h5><p>语法<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">if</span><span class="params">(条件)</span></span></div><div class="line">&#123; 条件成立时执行代码&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h5 id="判断选择"><a href="#判断选择" class="headerlink" title="判断选择"></a>判断选择</h5><p>语法<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">if</span><span class="params">(条件)</span></span></div><div class="line">&#123; 条件成立时执行的代码&#125;</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123;条件不成立时执行的代码&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="多重判断"><a href="#多重判断" class="headerlink" title="多重判断"></a>多重判断</h5><p>语法<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(条件<span class="number">1</span>)</div><div class="line">&#123; 条件<span class="number">1</span>成立时执行的代码&#125;</div><div class="line"><span class="keyword">else</span>  <span class="keyword">if</span>(条件<span class="number">2</span>)</div><div class="line">&#123; 条件<span class="number">2</span>成立时执行的代码&#125;</div><div class="line">...</div><div class="line"><span class="keyword">else</span>  <span class="keyword">if</span>(条件n)</div><div class="line">&#123; 条件n成立时执行的代码&#125;</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123; 条件<span class="number">1</span>、<span class="number">2</span>至n不成立时执行的代码&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="多重选择"><a href="#多重选择" class="headerlink" title="多重选择"></a>多重选择</h5><p>语法<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span>(表达式)</div><div class="line">&#123;</div><div class="line"><span class="keyword">case</span>值<span class="number">1</span>:</div><div class="line">  执行代码块 <span class="number">1</span></div><div class="line">  <span class="keyword">break</span>;</div><div class="line"><span class="keyword">case</span>值<span class="number">2</span>:</div><div class="line">  执行代码块 <span class="number">2</span></div><div class="line">  <span class="keyword">break</span>;</div><div class="line">...</div><div class="line"><span class="keyword">case</span>值<span class="string">n:</span></div><div class="line">  执行代码块 n</div><div class="line">  <span class="keyword">break</span>;</div><div class="line"><span class="string">default:</span></div><div class="line">  与 <span class="keyword">case</span>值<span class="number">1</span> 、 <span class="keyword">case</span>值<span class="number">2.</span>..<span class="keyword">case</span>值n 不同时执行的代码</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>switch必须赋初始值，值与每个case值匹配。满足执行该 case 后的所有语句，并用break语句来阻止运行下一个case,如果没有break则继续向下运行。如所有case值都不匹配，执行default后的语句。</p>
+<h5 id="循环控制"><a href="#循环控制" class="headerlink" title="循环控制"></a>循环控制</h5><p><strong>1.</strong> for循环:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">for</span><span class="params">(初始化变量;循环条件;循环迭代)</span></span></div><div class="line">&#123;     </div><div class="line">    循环语句 </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>2.</strong> while循环</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">while</span><span class="params">(判断条件)</span></span></div><div class="line">&#123;</div><div class="line">    循环语句</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>3.</strong> do…while循环<br>do while循环至少会执行一次</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">do</span></div><div class="line">&#123;</div><div class="line">    循环语句</div><div class="line">&#125;</div><div class="line"><span class="keyword">while</span><span class="comment">(判断条件)</span></div></pre></td></tr></table></figure>
+<p><strong>4.</strong> 退出循环break<br>在while、for、do…while、while循环中使用break语句退出当前循环，直接执行后面的代码<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(初始条件;判断条件;循环后条件值更新)</div><div class="line">&#123;</div><div class="line">  <span class="keyword">if</span>(特殊情况)</div><div class="line">  &#123;<span class="keyword">break</span>;&#125;</div><div class="line">  循环代码</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>5.</strong> 继续循环continue<br>跳过本次循环，而整个循环体继续执行<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(初始条件;判断条件;循环后条件值更新)</div><div class="line">&#123;</div><div class="line">  <span class="keyword">if</span>(特殊情况)</div><div class="line">  &#123; <span class="keyword">continue</span>; &#125;</div><div class="line"> 循环代码</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>循环中，当特殊情况发生的时候，本次循环将被跳过，而后续的循环则不会受到影响。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;逻辑运算&quot;&gt;&lt;a href=&quot;#逻辑运算&quot; class=&quot;headerlink&quot; title=&quot;逻辑运算&quot;&gt;&lt;/a&gt;逻辑运算&lt;/h4&gt;&lt;h5 id=&quot;判断&quot;&gt;&lt;a href=&quot;#判断&quot; class=&quot;headerlink&quot; title=&quot;判断&quot;&gt;&lt;/a&gt;判断&lt;/h5&gt;&lt;p&gt;语法&lt;br&gt;&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(条件)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123; 条件成立时执行代码&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="慕课网学习笔记" scheme="http://huyanshan.com/tags/%E6%85%95%E8%AF%BE%E7%BD%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>javascript数组</title>

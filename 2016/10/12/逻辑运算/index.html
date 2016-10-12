@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>逻辑运算 | 彦</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="逻辑运算判断语法12if(条件)&amp;#123; 条件成立时执行代码&amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="逻辑运算">
+<meta property="og:url" content="http://huyanshan.com/2016/10/12/逻辑运算/index.html">
+<meta property="og:site_name" content="彦">
+<meta property="og:description" content="逻辑运算判断语法12if(条件)&amp;#123; 条件成立时执行代码&amp;#125;">
+<meta property="og:updated_time" content="2016-10-12T06:32:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="逻辑运算">
+<meta name="twitter:description" content="逻辑运算判断语法12if(条件)&amp;#123; 条件成立时执行代码&amp;#125;">
+  
+    <link rel="alternative" href="/atom.xml" title="彦" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favsicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/ryan.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Yanshan</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">折腾的人生</p>
+		
+		
+		<form><input type="text" class="search" placeholder=" Search..."></form>
+				
+
+
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/tags/">标签云</a></li>
+				        
+							<li><a href="/about/">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:yanshan_huhu@qq.com" title="Email"></a></li>
+					        
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/u/5400534341" title="新浪微博"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/huyanshan" title="GitHub"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/huyanshan" title="知乎"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">一个热爱技术的青年</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Yanshan</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/ryan.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">Yanshan</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">折腾的人生</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/tags/">标签云</a></li>
+		        
+					<li><a href="/about/">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:yanshan_huhu@qq.com" title="Email"></a></li>
+					        
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/u/5400534341" title="新浪微博"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/huyanshan" title="GitHub"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/huyanshan" title="知乎"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-逻辑运算" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/12/逻辑运算/" class="article-date">
+  	<time datetime="2016-10-12T06:30:47.000Z" itemprop="datePublished">2016-10-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      逻辑运算
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/前端/">前端</a>
+	</div>
+
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/慕课网学习笔记/">慕课网学习笔记</a></li></ul>
+	</div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <h4 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h4><h5 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h5><p>语法<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">if</span><span class="params">(条件)</span></span></div><div class="line">&#123; 条件成立时执行代码&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h5 id="判断选择"><a href="#判断选择" class="headerlink" title="判断选择"></a>判断选择</h5><p>语法<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">if</span><span class="params">(条件)</span></span></div><div class="line">&#123; 条件成立时执行的代码&#125;</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123;条件不成立时执行的代码&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="多重判断"><a href="#多重判断" class="headerlink" title="多重判断"></a>多重判断</h5><p>语法<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(条件<span class="number">1</span>)</div><div class="line">&#123; 条件<span class="number">1</span>成立时执行的代码&#125;</div><div class="line"><span class="keyword">else</span>  <span class="keyword">if</span>(条件<span class="number">2</span>)</div><div class="line">&#123; 条件<span class="number">2</span>成立时执行的代码&#125;</div><div class="line">...</div><div class="line"><span class="keyword">else</span>  <span class="keyword">if</span>(条件n)</div><div class="line">&#123; 条件n成立时执行的代码&#125;</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123; 条件<span class="number">1</span>、<span class="number">2</span>至n不成立时执行的代码&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="多重选择"><a href="#多重选择" class="headerlink" title="多重选择"></a>多重选择</h5><p>语法<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span>(表达式)</div><div class="line">&#123;</div><div class="line"><span class="keyword">case</span>值<span class="number">1</span>:</div><div class="line">  执行代码块 <span class="number">1</span></div><div class="line">  <span class="keyword">break</span>;</div><div class="line"><span class="keyword">case</span>值<span class="number">2</span>:</div><div class="line">  执行代码块 <span class="number">2</span></div><div class="line">  <span class="keyword">break</span>;</div><div class="line">...</div><div class="line"><span class="keyword">case</span>值<span class="string">n:</span></div><div class="line">  执行代码块 n</div><div class="line">  <span class="keyword">break</span>;</div><div class="line"><span class="string">default:</span></div><div class="line">  与 <span class="keyword">case</span>值<span class="number">1</span> 、 <span class="keyword">case</span>值<span class="number">2.</span>..<span class="keyword">case</span>值n 不同时执行的代码</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>switch必须赋初始值，值与每个case值匹配。满足执行该 case 后的所有语句，并用break语句来阻止运行下一个case,如果没有break则继续向下运行。如所有case值都不匹配，执行default后的语句。</p>
+<h5 id="循环控制"><a href="#循环控制" class="headerlink" title="循环控制"></a>循环控制</h5><p><strong>1.</strong> for循环:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">for</span><span class="params">(初始化变量;循环条件;循环迭代)</span></span></div><div class="line">&#123;     </div><div class="line">    循环语句 </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>2.</strong> while循环</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">while</span><span class="params">(判断条件)</span></span></div><div class="line">&#123;</div><div class="line">    循环语句</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>3.</strong> do…while循环<br>do while循环至少会执行一次</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">do</span></div><div class="line">&#123;</div><div class="line">    循环语句</div><div class="line">&#125;</div><div class="line"><span class="keyword">while</span><span class="comment">(判断条件)</span></div></pre></td></tr></table></figure>
+<p><strong>4.</strong> 退出循环break<br>在while、for、do…while、while循环中使用break语句退出当前循环，直接执行后面的代码<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(初始条件;判断条件;循环后条件值更新)</div><div class="line">&#123;</div><div class="line">  <span class="keyword">if</span>(特殊情况)</div><div class="line">  &#123;<span class="keyword">break</span>;&#125;</div><div class="line">  循环代码</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>5.</strong> 继续循环continue<br>跳过本次循环，而整个循环体继续执行<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(初始条件;判断条件;循环后条件值更新)</div><div class="line">&#123;</div><div class="line">  <span class="keyword">if</span>(特殊情况)</div><div class="line">  &#123; <span class="keyword">continue</span>; &#125;</div><div class="line"> 循环代码</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>循环中，当特殊情况发生的时候，本次循环将被跳过，而后续的循环则不会受到影响。</p>
+
+      
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="copyright">
+  <p><span>本文标题:</span><a href="/2016/10/12/逻辑运算/">逻辑运算</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Yanshan 的个人博客">Yanshan</a></p>
+  <p><span>发布时间:</span>2016年10月12日 - 14时30分</p>
+  <p><span>最后更新:</span>2016年10月12日 - 14时32分</p>
+  <p>
+    <span>原始链接:</span><a href="/2016/10/12/逻辑运算/" title="逻辑运算">http://huyanshan.com/2016/10/12/逻辑运算/</a>
+    <span class="btn" data-clipboard-text="原文: http://huyanshan.com/2016/10/12/逻辑运算/　　作者: Yanshan" title="点击复制文章链接">
+        <i class="fa fa-clipboard"></i>
+    </span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
+  <script src="/js/clipboard.min.js"></script>
+  <script> var clipboard = new Clipboard('.btn'); </script>
+</div>
+<style type="text/css">
+  .copyright p .btn {
+    margin-left: 1em;
+  }
+  .copyright:hover p .btn::after {
+    content: "复制"
+  }
+  .copyright p .btn:hover {
+      color: gray;
+      cursor: pointer;
+    };
+</style>
+
+
+
+<nav id="article-nav">
+  
+  
+    <div id="article-nav-older" class="article-nav-title">
+      <a href="/2016/10/10/javascript数组/">
+        javascript数组
+      </a>
+    </div>
+  
+</nav>
+
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+<strong class="toc-title">文章目录</strong>
+<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#逻辑运算"><span class="toc-number">1.</span> <span class="toc-text">逻辑运算</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#判断"><span class="toc-number">1.1.</span> <span class="toc-text">判断</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#判断选择"><span class="toc-number">1.2.</span> <span class="toc-text">判断选择</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#多重判断"><span class="toc-number">1.3.</span> <span class="toc-text">多重判断</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#多重选择"><span class="toc-number">1.4.</span> <span class="toc-text">多重选择</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#循环控制"><span class="toc-number">1.5.</span> <span class="toc-text">循环控制</span></a></li></ol></li></ol>
+</div>
+<style type="text/css">
+  .left-col .switch-btn {
+    display: none;
+  }
+  .left-col .switch-area {
+    display: none;
+  }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+  var toc_button= document.getElementById("tocButton");
+  var toc_div= document.getElementById("toc");
+  /* Show or hide toc when click on tocButton.
+  通过点击设置的按钮显示或者隐藏文章目录.*/
+  toc_button.onclick=function(){
+  if(toc_div.style.display=="none"){
+  toc_div.style.display="block";
+  toc_button.value="隐藏目录";
+  document.getElementById("switch-btn").style.display="none";
+  document.getElementById("switch-area").style.display="none";
+  }
+  else{
+  toc_div.style.display="none";
+  toc_button.value="显示目录";
+  document.getElementById("switch-btn").style.display="block";
+  document.getElementById("switch-area").style.display="block";
+  }
+  }
+</script>
+
+
+<div class="share">
+	<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+	<a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+	</div>
+	<script>
+	window._bd_share_config={
+		"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/10/12/逻辑运算/" data-title="逻辑运算" data-url="http://huyanshan.com/2016/10/12/逻辑运算/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"huyanshan"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#ds-thread" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+  
+  
+    <div  class="post-nav-button">
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2016/10/10/javascript数组/" title="下一篇: javascript数组">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+    
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+        
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 Yanshan
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+  <style>
+    body {
+      background: lightgray;
+    }
+    #container .left-col {
+      background: white;
+    }
+    .article-inner {
+      background: white;
+    }
+    .post-nav-button {
+      background: #ececec;
+    }
+    #header .header-nav .social #GitHub {
+      background-color: #bfd3ec;
+    }
+  </style>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
