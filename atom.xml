@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://huyanshan.com/"/>
-  <updated>2016-10-12T06:32:26.000Z</updated>
+  <updated>2016-10-12T10:11:22.000Z</updated>
   <id>http://huyanshan.com/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>函数</title>
+    <link href="http://huyanshan.com/2016/10/12/%E5%87%BD%E6%95%B0/"/>
+    <id>http://huyanshan.com/2016/10/12/函数/</id>
+    <published>2016-10-12T10:10:46.000Z</published>
+    <updated>2016-10-12T10:11:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h5><p>语法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>  函数名(<span class="params"> </span>)</span></div><div class="line">&#123;</div><div class="line">     函数体;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>例：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> sum,num1,num2;</div><div class="line">        sum = num1+num2;</div><div class="line">        <span class="built_in">document</span>.write(sum);</div><div class="line">    &#125;</div><div class="line">    add();</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h5 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h5><p>第一种情况:在<script>标签内调用。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="actionscript"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">add2</span><span class="params">()</span></div><div class="line">    </span>&#123;</div><div class="line">         sum = <span class="number">1</span> + <span class="number">1</span>;</div><div class="line">         alert(sum);</div><div class="line">    &#125;</div><div class="line">  add2();<span class="comment">//调用函数，直接写函数名。</span></div><div class="line"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>第二种情况:在HTML文件中调用，如通过点击按钮后调用定义好的函数。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="actionscript"></div><div class="line">   <span class="function"><span class="keyword">function</span> <span class="title">add2</span><span class="params">()</span></div><div class="line">   </span>&#123;</div><div class="line">         sum = <span class="number">5</span> + <span class="number">6</span>;</div><div class="line">         alert(sum);</div><div class="line">   &#125;</div><div class="line"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"click it"</span> <span class="attr">onclick</span>=<span class="string">"add2()"</span>&gt;</span>  //按钮,onclick点击事件，直接写函数名</div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h5 id="有参数的函数"><a href="#有参数的函数" class="headerlink" title="有参数的函数"></a>有参数的函数</h5><p>语法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> 函数名(<span class="params">参数1,参数2,...</span>)</div><div class="line"></span>&#123;</div><div class="line">     函数代码</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h5><p>语法：<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function <span class="function"><span class="title">fun</span><span class="params">(x,y)</span></span></div><div class="line">&#123;</div><div class="line">   sum = x + y;</div><div class="line">   <span class="keyword">return</span> sum; <span class="comment">//返回函数值</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">result = <span class="function"><span class="title">fun</span><span class="params">(<span class="number">1</span>,<span class="number">3</span>)</span></span>;</div></pre></td></tr></table></figure></p>
+</script></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;函数定义&quot;&gt;&lt;a href=&quot;#函数定义&quot; class=&quot;headerlink&quot; title=&quot;函数定义&quot;&gt;&lt;/a&gt;函数定义&lt;/h5&gt;&lt;p&gt;语法：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;  函数名(&lt;span class=&quot;params&quot;&gt; &lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;     函数体;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://huyanshan.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="慕课网学习笔记" scheme="http://huyanshan.com/tags/%E6%85%95%E8%AF%BE%E7%BD%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>逻辑运算</title>
